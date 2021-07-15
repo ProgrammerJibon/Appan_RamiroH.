@@ -784,7 +784,7 @@
     <string name="admob_app_id">ca-app-pub-3753429604221199~4573525785</string>
     <string name="banner_home">ca-app-pub-3753429604221199/9261718010</string>
     <string name="interstitial_full_screen">ca-app-pub-3753429604221199/6563447619</string>
-<!--    Google test id-->
+    <!--    Google test id-->
 <!--    <string name="interstitial_full_screen">ca-app-pub-3940256099942544/1033173712</string>-->
 
 </resources>

@@ -6,17 +6,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.os.Handler;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.WindowManager;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.google.gson.Gson;
+import com.victor.loading.rotate.RotateLoading;
 import com.yapue.appan.activity.BaseActivity;
 import com.yapue.appan.https.HttpsRequest;
 import com.yapue.appan.interfaces.Helper;
@@ -24,11 +25,12 @@ import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 import com.yapue.appan.utils.ProjectUtils;
-import com.victor.loading.rotate.RotateLoading;
 
 import org.json.JSONObject;
 
 import java.util.HashMap;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Splash extends AppCompatActivity {
     private Handler handler = new Handler();
@@ -64,7 +66,7 @@ public class Splash extends AppCompatActivity {
         userDetails = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         Log.e("tokensss", userDetails.getString(Consts.TOKAN, ""));
 
-        rotateLoading = (RotateLoading) findViewById(R.id.rotateloading);
+        rotateLoading = findViewById(R.id.rotateloading);
         share = SharedPrefrence.getInstance(this);
         mContext = Splash.this;
         rotateLoading.start();
@@ -74,6 +76,23 @@ public class Splash extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
         } else {
             handler.postDelayed(mTask, 5000);
+        }
+
+        try {
+            SharedPrefrence preference = SharedPrefrence.getInstance(getApplicationContext());
+            loginDTO = preference.getParentUser(Consts.LOGINDTO);
+            if (loginDTO.getId().contains(Consts.GUEST_ID)) {
+                (new Timer()).schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(getApplicationContext(), BaseActivity.class));
+                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                        finish();
+                    }
+                }, 3000);
+            }
+        } catch (Exception error) {
+            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
         }
     }
 

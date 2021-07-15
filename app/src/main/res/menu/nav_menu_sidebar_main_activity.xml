@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:checkable="false"
+            android:title="@string/app_name">
+            <menu>
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_baseline_home_24"
+                    android:title="Home" />
+                <item
+                    android:id="@+id/profile"
+                    android:icon="@drawable/ic_outline_account_circle_24"
+                    android:title="Profile" />
+                <item
+                    android:id="@+id/nav_messages"
+                    android:icon="@drawable/ic_baseline_message_24"
+                    android:title="Messages" />
+                <item
+                    android:id="@+id/nav_donate"
+                    android:icon="@drawable/ic_baseline_monetization_on_24"
+                    android:title="Donation" />
+                <item
+                    android:id="@+id/nav_myOrders"
+                    android:icon="@drawable/ic_baseline_shopping_cart_24"
+                    android:title="My Orders" />
+                <item
+                    android:id="@+id/nav_event"
+                    android:icon="@drawable/ic_baseline_event_24"
+                    android:title="Events" />
+                <item
+                    android:id="@+id/nav_notification"
+                    android:icon="@drawable/ic_baseline_notifications_none_24"
+                    android:title="Notifications" />
+                <item
+                    android:id="@+id/nav_categories"
+                    android:icon="@drawable/ic_outline_category_24"
+                    android:title="Categories" />
+                <item
+                    android:id="@+id/nav_myWishList"
+                    android:icon="@drawable/ic_baseline_playlist_add_check_24"
+                    android:title="My WishList" />
+                <item
+                    android:id="@+id/nav_ui_mode"
+                    android:icon="@drawable/ic_baseline_nights_stay_24"
+                    android:title="Night Mode" />
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_baseline_settings_24"
+                    android:title="Settings" />
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/ic_baseline_login_24"
+                    android:title="Login" />
+            </menu>
+        </item>
+        <item android:title="Others">
+            <menu>
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_baseline_share_24"
+                    android:title="Share" />
+                <item
+                    android:id="@+id/nav_about"
+                    android:icon="@drawable/ic_baseline_contact_support_24"
+                    android:title="About Us" />
+                <item
+                    android:id="@+id/nav_exit"
+                    android:icon="@drawable/ic_baseline_exit_to_app_24"
+                    android:title="Exit" />
+            </menu>
+        </item>
+
+    </group>
+</menu>

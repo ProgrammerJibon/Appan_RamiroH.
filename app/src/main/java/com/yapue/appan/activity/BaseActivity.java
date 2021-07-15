@@ -4,14 +4,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.gson.Gson;
 import com.nightonke.boommenu.BoomButtons.BoomButton;
@@ -21,6 +22,7 @@ import com.nightonke.boommenu.ButtonEnum;
 import com.nightonke.boommenu.OnBoomListenerAdapter;
 import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 import com.yapue.appan.BuildConfig;
+import com.yapue.appan.NavigationDrawerSettings;
 import com.yapue.appan.R;
 import com.yapue.appan.activity.UserProfile.UserProfileActivity;
 import com.yapue.appan.fragment.AddPet.PetList;
@@ -82,6 +84,7 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ProjectUtils.setStatusBarGradiant(BaseActivity.this);
         setContentView(R.layout.activity_base);
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base);
         preference = SharedPrefrence.getInstance(this);
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
         mContext = BaseActivity.this;
@@ -107,7 +110,7 @@ public class BaseActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame, fragment, TAG_HOME);
         fragmentTransaction.commitAllowingStateLoss();
 
-        bmb1 = (BoomMenuButton) findViewById(R.id.bmb1);
+        bmb1 = findViewById(R.id.bmb1);
         bmb1.setButtonEnum(ButtonEnum.TextInsideCircle);
         bmb1.setPiecePlaceEnum(PiecePlaceEnum.DOT_6_1);
         bmb1.setButtonPlaceEnum(ButtonPlaceEnum.SC_6_1);
