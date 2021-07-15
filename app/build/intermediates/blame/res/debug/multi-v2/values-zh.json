@@ -1,0 +1,53 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\__PROJECTS__\\App Dev\\ClientsDev\\Restart\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\838eeaef258162117d98e9eaf5cac9b8\\jetified-singledateandtimepicker-1.2.2\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,96,137",
+                        "endColumns": "40,40,43",
+                        "endOffsets": "91,132,176"
+                    },
+                    "to": {
+                        "startLines": "6,7,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "199,240,281",
+                        "endColumns": "40,40,43",
+                        "endOffsets": "235,276,320"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\bc35bd15eb342f5d47b3a738e1d770e0\\jetified-bottomsheet-1.5.0\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "38",
+                        "endOffsets": "89"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "160",
+                        "endColumns": "38",
+                        "endOffsets": "194"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\456f84cec0f853d2aea6d7fbce980342\\jetified-WheelPicker-1.1.2\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,89,125",
+                        "endColumns": "33,35,34",
+                        "endOffsets": "84,120,155"
+                    }
+                }
+            ]
+        }
+    ]
+}

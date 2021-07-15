@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\__PROJECTS__\\App Dev\\ClientsDev\\Restart\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rPE\\values-es-rPE.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\20b77da5280cdb291ce7a105da9f530c\\jetified-checkout-4.5.2\\res\\values-es-rPE\\values-es-rPE.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "64",
+                        "endOffsets": "115"
+                    }
+                }
+            ]
+        }
+    ]
+}

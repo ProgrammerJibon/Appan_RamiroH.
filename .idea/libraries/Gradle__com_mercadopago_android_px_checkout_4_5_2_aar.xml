@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.mercadopago.android.px:checkout:4.5.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20b77da5280cdb291ce7a105da9f530c/jetified-checkout-4.5.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20b77da5280cdb291ce7a105da9f530c/jetified-checkout-4.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/20b77da5280cdb291ce7a105da9f530c/jetified-checkout-4.5.2/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mercadopago.android.px/checkout/4.5.2/b442288804a0018a694f368f31565766e300ad8f/checkout-4.5.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mercadopago.android.px/checkout/4.5.2/3631cfe4aeab41cd5f1f63d0081135137e28f539/checkout-4.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

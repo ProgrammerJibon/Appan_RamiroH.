@@ -1,0 +1,89 @@
+{
+  "project_info": {
+    "project_number": "320324078035",
+    "firebase_url": "https://petstand-8434b.firebaseio.com",
+    "project_id": "petstand-8434b",
+    "storage_bucket": "petstand-8434b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320324078035:android:f11249fb9e672ab6",
+        "android_client_info": {
+          "package_name": "com.yapue.appan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320324078035-jla00kq63o2ld0at88602n5lf6frleht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yapue.appan",
+            "certificate_hash": "52e0eb35bb196526f63b3d56aab4afe33842faec"
+          }
+        },
+        {
+          "client_id": "320324078035-7p0s9lmaguk19h9om7quflnrfch97psp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yapue.appan",
+            "certificate_hash": "69e850be7c532b26bc19941df7fe6b534968b3ca"
+          }
+        },
+        {
+          "client_id": "320324078035-hc0qkj7aapoa771kga6u0r7rctgf66ts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yapue.appan",
+            "certificate_hash": "ea049bc34ed5d291e76bb680282bb48ccad2deb7"
+          }
+        },
+        {
+          "client_id": "320324078035-mjm6mtng93fb4tiqep4j55qip280d11v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yapue.appan",
+            "certificate_hash": "803a4f9a79c47ede271a3d5729792bc1f6f2f345"
+          }
+        },
+        {
+          "client_id": "320324078035-r1kld34nm4f886n6lbtub7mjgg14r59s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yapue.appan",
+            "certificate_hash": "398319148996ae0fd0f9a68374a7b9649812b495"
+          }
+        },
+        {
+          "client_id": "320324078035-jq8lhmb1ovt7rvl6l9efknelko5ra05c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-0iCP_5ZtbrriaKncQo74g8URhTpJm0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320324078035-jq8lhmb1ovt7rvl6l9efknelko5ra05c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "320324078035-m1ab163ifl1ocesqnteo0ami9li8cfs0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.yapue.appan",
+                "app_store_id": "123456"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3730100591148778~5238649932"
+    }
+  ],
+  "configuration_version": "1"
+}

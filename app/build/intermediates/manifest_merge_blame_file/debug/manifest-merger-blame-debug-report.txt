@@ -1,0 +1,1471 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.yapue.appan"
+4    android:versionCode="11001010"
+5    android:versionName="Error.00x7E008" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml
+10    <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/> -->
+11    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+11-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:6:5-74
+11-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:6:22-72
+12    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+12-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:7:5-71
+12-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:7:22-68
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:8:5-67
+13-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:8:22-64
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:9:5-79
+14-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:9:22-76
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:10:5-81
+15-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:10:22-78
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:11:5-80
+16-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:11:22-77
+17    <uses-permission android:name="android.permission.BLUETOOTH" />
+17-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:12:5-68
+17-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:12:22-65
+18    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+18-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:13:5-74
+18-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:13:22-71
+19    <uses-permission android:name="android.permission.READ_CALENDAR" />
+19-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:14:5-72
+19-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:14:22-69
+20    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+20-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:15:5-73
+20-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:15:22-70
+21    <uses-permission
+21-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:16:5-66
+22        android:name="android.permission.VIBRATE"
+22-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:16:22-63
+23        android:required="false" />
+23-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:16:9-33
+24    <uses-permission android:name="android.permission.WAKE_LOCK" />
+24-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:17:5-68
+24-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:17:22-65
+25    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Push service 运行需要的权限 -->
+25-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:18:5-79
+25-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:18:22-76
+26    <!-- SDCard中创建与删除文件权限 -->
+27    <uses-feature
+27-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:20:5-22:35
+28        android:name="android.hardware.bluetooth_le"
+28-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:21:9-53
+29        android:required="true" /> <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+29-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:22:9-32
+30    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Permission to use camera - required -->
+30-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:16:5-66
+30-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:16:22-63
+31    <uses-permission android:name="android.permission.CAMERA" /> <!-- Camera features - recommended -->
+31-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:24:5-65
+31-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:24:22-62
+32    <uses-feature
+32-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:25:5-27:36
+33        android:name="android.hardware.camera"
+33-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:26:9-47
+34        android:required="false" />
+34-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:27:9-33
+35    <uses-feature
+35-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:28:5-30:36
+36        android:name="android.hardware.camera.autofocus"
+36-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:29:9-57
+37        android:required="false" />
+37-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:30:9-33
+38    <uses-feature
+38-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:31:5-33:36
+39        android:name="android.hardware.camera.flash"
+39-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:32:9-53
+40        android:required="false" />
+40-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:33:9-33
+41
+42    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+42-->[com.schibstedspain.android:leku:5.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\9be8de64c2930812b9661d287343a5be\jetified-leku-5.0.0\AndroidManifest.xml:26:5-81
+42-->[com.schibstedspain.android:leku:5.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\9be8de64c2930812b9661d287343a5be\jetified-leku-5.0.0\AndroidManifest.xml:26:22-78
+43
+44    <uses-feature
+44-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:18:5-20:36
+45        android:name="android.hardware.location.gps"
+45-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:19:9-53
+46        android:required="false" />
+46-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:20:9-33
+47
+48    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+48-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:10:5-76
+48-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:10:22-73
+49
+50    <uses-feature
+50-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1eccb7f0d7349dde76f4558ee10bd4a4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+51        android:glEsVersion="0x00020000"
+51-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1eccb7f0d7349dde76f4558ee10bd4a4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+52        android:required="true" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+52-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1eccb7f0d7349dde76f4558ee10bd4a4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+53    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+53-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:26:5-82
+53-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:26:22-79
+54    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+54-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:26:5-110
+54-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:26:22-107
+55
+56    <application
+56-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:35:5-477:19
+57        android:name="com.yapue.appan.SysApplication"
+57-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:36:9-54
+58        android:allowBackup="false"
+58-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:37:9-36
+59        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+59-->[androidx.core:core:1.3.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\4a7157e55c32d39ff7bc7c85b9790e4f\core-1.3.2\AndroidManifest.xml:24:18-86
+60        android:debuggable="true"
+61        android:icon="@mipmap/ic_launcher"
+61-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:38:9-43
+62        android:label="@string/app_name"
+62-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:39:9-41
+63        android:requestLegacyExternalStorage="true"
+63-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:45:9-52
+64        android:roundIcon="@mipmap/ic_launcher_round"
+64-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:40:9-54
+65        android:supportsRtl="true"
+65-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:41:9-35
+66        android:theme="@style/AppTheme"
+66-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:42:9-40
+67        android:usesCleartextTraffic="true" >
+67-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:43:9-44
+68        <meta-data
+68-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:46:9-48:69
+69            android:name="com.google.android.gms.ads.APPLICATION_ID"
+69-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:47:13-69
+70            android:value="ca-app-pub-3753429604221199~4573525785" />
+70-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:48:13-67
+71
+72        <activity
+72-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:49:9-50:55
+73            android:name="com.yapue.appan.activity.food.PromoCodeActivity"
+73-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:49:19-81
+74            android:launchMode="singleTop" />
+74-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:50:13-43
+75        <activity
+75-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:51:9-52:45
+76            android:name="com.yapue.appan.activity.home.BreedInfoHome"
+76-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:51:19-77
+77            android:launchMode="singleTop" />
+77-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:52:13-43
+78        <activity
+78-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:53:9-54:45
+79            android:name="com.yapue.appan.activity.petlist.PetListr"
+79-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:53:19-75
+80            android:launchMode="singleTop" />
+80-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:54:13-43
+81
+82        <provider
+83            android:name="androidx.core.content.FileProvider"
+83-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:56:13-62
+84            android:authorities="com.yapue.appan.fileprovider"
+84-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:57:13-64
+85            android:exported="false"
+85-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:58:13-37
+86            android:grantUriPermissions="true" >
+86-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:59:13-47
+87            <meta-data
+87-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:60:13-62:53
+88                android:name="android.support.FILE_PROVIDER_PATHS"
+88-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:61:17-67
+89                android:resource="@xml/filepaths" />
+89-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:62:17-50
+90        </provider>
+91
+92        <meta-data
+92-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:65:9-67:69
+93            android:name="com.google.android.gms.verion"
+93-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:66:13-57
+94            android:value="@integer/google_play_services_version" />
+94-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:67:13-66
+95        <meta-data
+95-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:68:9-70:71
+96            android:name="com.google.android.geo.API_KEY"
+96-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:69:13-58
+97            android:value="AIzaSyD-0iCP_5ZtbrriaKncQo74g8URhTpJm0w" />
+97-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:70:13-68
+98        <!--
+99            <meta-data
+100            android:name="com.google.android.maps.v2.API_KEY"
+101            android:value="@string/google_maps_key" />
+102        -->
+103        <activity
+103-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:76:9-84:20
+104            android:name="com.yapue.appan.Splash"
+104-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:77:13-50
+105            android:screenOrientation="portrait" >
+105-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:78:13-49
+106            <intent-filter>
+106-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:79:13-83:29
+107                <action android:name="android.intent.action.MAIN" />
+107-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:80:17-69
+107-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:80:25-66
+108
+109                <category android:name="android.intent.category.LAUNCHER" />
+109-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:82:17-77
+109-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:82:27-74
+110            </intent-filter>
+111        </activity>
+112        <activity
+112-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:85:9-87:52
+113            android:name="com.yapue.appan.activity.register.LoginActivity"
+113-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:86:13-75
+114            android:screenOrientation="portrait" />
+114-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:87:13-49
+115        <activity
+115-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:88:9-91:52
+116            android:name="com.yapue.appan.activity.register.OTPActivity"
+116-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:89:13-73
+117            android:launchMode="singleTop"
+117-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:90:13-43
+118            android:screenOrientation="portrait" />
+118-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:91:13-49
+119        <activity
+119-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:92:9-95:63
+120            android:name="com.yapue.appan.activity.BaseActivity"
+120-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:93:13-65
+121            android:screenOrientation="portrait"
+121-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:94:13-49
+122            android:windowSoftInputMode="stateAlwaysHidden" />
+122-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:95:13-60
+123        <activity
+123-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:96:9-99:52
+124            android:name="com.yapue.appan.activity.UserProfile.UserProfileActivity"
+124-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:97:13-84
+125            android:launchMode="singleTop"
+125-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:98:13-43
+126            android:screenOrientation="portrait" />
+126-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:99:13-49
+127        <activity
+127-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:100:9-103:52
+128            android:name="com.yapue.appan.activity.WebViewActivity"
+128-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:101:13-68
+129            android:launchMode="singleTop"
+129-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:102:13-43
+130            android:screenOrientation="portrait" />
+130-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:103:13-49
+131        <activity
+131-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:104:9-107:52
+132            android:name="com.yapue.appan.activity.AboutUsActivity"
+132-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:105:13-68
+133            android:launchMode="singleTop"
+133-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:106:13-43
+134            android:screenOrientation="portrait" />
+134-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:107:13-49
+135        <activity
+135-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:108:9-110:52
+136            android:name="com.yapue.appan.utils.MainFragment"
+136-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:109:13-62
+137            android:screenOrientation="portrait" />
+137-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:110:13-49
+138        <activity
+138-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:111:9-114:52
+139            android:name="com.yapue.appan.activity.editPet.EditPet"
+139-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:112:13-68
+140            android:launchMode="singleTop"
+140-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:113:13-43
+141            android:screenOrientation="portrait" />
+141-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:114:13-49
+142        <activity
+142-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:115:9-118:52
+143            android:name="com.yapue.appan.activity.food.SubCategoryList"
+143-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:116:13-73
+144            android:launchMode="singleTop"
+144-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:117:13-43
+145            android:screenOrientation="portrait" />
+145-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:118:13-49
+146        <activity
+146-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:119:9-122:52
+147            android:name="com.yapue.appan.activity.petprofile.ProfilePets"
+147-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:120:13-75
+148            android:launchMode="singleTop"
+148-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:121:13-43
+149            android:screenOrientation="portrait" />
+149-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:122:13-49
+150        <activity
+150-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:123:9-126:52
+151            android:name="com.yapue.appan.activity.addpet.AddPetSlides"
+151-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:124:13-72
+152            android:launchMode="singleTop"
+152-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:125:13-43
+153            android:screenOrientation="portrait" />
+153-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:126:13-49
+154        <activity
+154-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:127:9-130:52
+155            android:name="com.yapue.appan.activity.food.SearchActivity"
+155-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:128:13-72
+156            android:launchMode="singleTop"
+156-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:129:13-43
+157            android:screenOrientation="portrait" />
+157-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:130:13-49
+158        <activity
+158-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:131:9-134:52
+159            android:name="com.yapue.appan.activity.nearbypetlist.FriendPetProfile"
+159-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:132:13-83
+160            android:launchMode="singleTop"
+160-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:133:13-43
+161            android:screenOrientation="portrait" />
+161-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:134:13-49
+162        <activity
+162-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:135:9-138:52
+163            android:name="com.yapue.appan.activity.nearbypetlist.PetProfileNearByUser"
+163-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:136:13-87
+164            android:launchMode="singleTop"
+164-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:137:13-43
+165            android:screenOrientation="portrait" />
+165-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:138:13-49
+166        <activity
+166-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:139:9-142:52
+167            android:name="com.yapue.appan.activity.duties.AddReminder"
+167-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:140:13-71
+168            android:launchMode="singleTop"
+168-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:141:13-43
+169            android:screenOrientation="portrait" />
+169-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:142:13-49
+170        <activity
+170-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:143:9-146:52
+171            android:name="com.yapue.appan.activity.duties.HistoryReminder"
+171-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:144:13-75
+172            android:launchMode="singleTop"
+172-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:145:13-43
+173            android:screenOrientation="portrait" />
+173-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:146:13-49
+174        <activity
+174-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:147:9-150:52
+175            android:name="com.yapue.appan.activity.duties.ConfirmReminder"
+175-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:148:13-75
+176            android:launchMode="singleTop"
+176-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:149:13-43
+177            android:screenOrientation="portrait" />
+177-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:150:13-49
+178        <activity
+178-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:151:9-154:52
+179            android:name="com.yapue.appan.activity.duties.CreateReminder"
+179-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:152:13-74
+180            android:launchMode="singleTop"
+180-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:153:13-43
+181            android:screenOrientation="portrait" />
+181-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:154:13-49
+182        <activity
+182-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:155:9-158:52
+183            android:name="com.yapue.appan.activity.register.LoginSignupactivity"
+183-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:156:13-81
+184            android:launchMode="singleTop"
+184-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:157:13-43
+185            android:screenOrientation="portrait" />
+185-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:158:13-49
+186        <activity
+186-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:159:9-162:52
+187            android:name="com.yapue.appan.activity.register.ForgotpasswordActivity"
+187-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:160:13-84
+188            android:launchMode="singleTop"
+188-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:161:13-43
+189            android:screenOrientation="portrait" />
+189-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:162:13-49
+190        <activity
+190-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:163:9-166:52
+191            android:name="com.yapue.appan.activity.register.ChangePasswordActivity"
+191-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:164:13-84
+192            android:launchMode="singleTop"
+192-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:165:13-43
+193            android:screenOrientation="portrait" />
+193-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:166:13-49
+194        <activity
+194-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:167:9-170:52
+195            android:name="com.yapue.appan.activity.duties.EditReminder"
+195-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:168:13-72
+196            android:launchMode="singleTop"
+196-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:169:13-43
+197            android:screenOrientation="portrait" />
+197-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:170:13-49
+198        <activity
+198-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:171:9-174:52
+199            android:name="com.yapue.appan.activity.food.FoodList"
+199-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:172:13-66
+200            android:launchMode="singleTop"
+200-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:173:13-43
+201            android:screenOrientation="portrait" />
+201-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:174:13-49
+202        <activity
+202-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:175:9-178:52
+203            android:name="com.yapue.appan.activity.food.ProductByHomeList"
+203-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:176:13-75
+204            android:launchMode="singleTop"
+204-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:177:13-43
+205            android:screenOrientation="portrait" />
+205-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:178:13-49
+206        <activity
+206-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:179:9-182:52
+207            android:name="com.yapue.appan.activity.food.BrandList"
+207-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:180:13-67
+208            android:launchMode="singleTop"
+208-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:181:13-43
+209            android:screenOrientation="portrait" />
+209-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:182:13-49
+210        <activity
+210-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:183:9-186:52
+211            android:name="com.yapue.appan.activity.food.ShopifyFoodList"
+211-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:184:13-73
+212            android:launchMode="singleTop"
+212-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:185:13-43
+213            android:screenOrientation="portrait" />
+213-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:186:13-49
+214        <activity
+214-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:187:9-190:52
+215            android:name="com.yapue.appan.activity.food.ShopifyFoodDetail"
+215-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:188:13-75
+216            android:launchMode="singleTop"
+216-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:189:13-43
+217            android:screenOrientation="portrait" />
+217-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:190:13-49
+218        <activity
+218-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:191:9-194:52
+219            android:name="com.yapue.appan.activity.chat.ChatNotificationActivity"
+219-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:192:13-82
+220            android:launchMode="singleTop"
+220-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:193:13-43
+221            android:screenOrientation="portrait" />
+221-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:194:13-49
+222        <activity
+222-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:195:9-198:52
+223            android:name="com.yapue.appan.activity.food.FoodDetail"
+223-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:196:13-68
+224            android:launchMode="singleTop"
+224-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:197:13-43
+225            android:screenOrientation="portrait" />
+225-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:198:13-49
+226        <activity
+226-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:199:9-202:52
+227            android:name="com.yapue.appan.activity.food.Cart"
+227-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:200:13-62
+228            android:launchMode="singleTop"
+228-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:201:13-43
+229            android:screenOrientation="portrait" />
+229-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:202:13-49
+230        <activity android:name="com.yapue.appan.activity.Memories.SpacePhotoActivity" />
+230-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:203:9-89
+230-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:203:19-86
+231        <activity
+231-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:204:9-207:78
+232            android:name="com.yapue.appan.activity.food.ViewOrderDetails"
+232-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:205:13-74
+233            android:launchMode="singleTop"
+233-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:206:13-43
+234            android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert" />
+234-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:207:13-75
+235        <activity
+235-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:208:9-211:52
+236            android:name="com.yapue.appan.activity.AddMemories"
+236-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:209:13-64
+237            android:launchMode="singleTop"
+237-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:210:13-43
+238            android:screenOrientation="portrait" />
+238-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:211:13-49
+239        <activity
+239-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:212:9-215:52
+240            android:name="com.yapue.appan.activity.MyOrder.MyOrderActivity"
+240-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:213:13-76
+241            android:launchMode="singleTop"
+241-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:214:13-43
+242            android:screenOrientation="portrait" />
+242-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:215:13-49
+243        <activity
+243-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:216:9-219:52
+244            android:name="com.yapue.appan.activity.MyOrder.vieworder.ViewOrderActivity"
+244-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:217:13-88
+245            android:launchMode="singleTop"
+245-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:218:13-43
+246            android:screenOrientation="portrait" />
+246-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:219:13-49
+247        <activity
+247-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:220:9-223:52
+248            android:name="com.yapue.appan.activity.vat.PlaceDetailsActivity"
+248-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:221:13-77
+249            android:launchMode="singleTop"
+249-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:222:13-43
+250            android:screenOrientation="portrait" />
+250-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:223:13-49
+251        <activity
+251-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:224:9-228:45
+252            android:name="com.yapue.appan.activity.ContactActivity"
+252-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:225:13-68
+253            android:launchMode="singleTop"
+253-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:228:13-43
+254            android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert"
+254-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:226:13-75
+255            android:windowSoftInputMode="stateAlwaysHidden" />
+255-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:227:13-60
+256        <activity
+256-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:229:9-232:52
+257            android:name="com.yapue.appan.activity.filter.FilterActivity"
+257-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:230:13-74
+258            android:launchMode="singleTop"
+258-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:231:13-43
+259            android:screenOrientation="portrait" />
+259-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:232:13-49
+260        <activity
+260-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:233:9-237:63
+261            android:name="com.yapue.appan.activity.filter.SearchActivity"
+261-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:234:13-74
+262            android:launchMode="singleTop"
+262-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:236:13-43
+263            android:screenOrientation="portrait"
+263-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:235:13-49
+264            android:windowSoftInputMode="stateAlwaysHidden" />
+264-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:237:13-60
+265        <activity
+265-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:238:9-242:63
+266            android:name="com.yapue.appan.activity.wall.Comment"
+266-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:239:13-65
+267            android:launchMode="singleTop"
+267-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:241:13-43
+268            android:screenOrientation="portrait"
+268-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:240:13-49
+269            android:windowSoftInputMode="stateAlwaysHidden" />
+269-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:242:13-60
+270        <activity
+270-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:243:9-246:52
+271            android:name="com.yapue.appan.activity.petprofile.RatingPet"
+271-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:244:13-73
+272            android:launchMode="singleTop"
+272-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:245:13-43
+273            android:screenOrientation="portrait" />
+273-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:246:13-49
+274        <activity
+274-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:247:9-250:52
+275            android:name="com.yapue.appan.activity.wall.PetVoteActivity"
+275-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:248:13-73
+276            android:launchMode="singleTop"
+276-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:249:13-43
+277            android:screenOrientation="portrait" />
+277-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:250:13-49
+278        <activity
+278-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:251:9-255:63
+279            android:name="com.yapue.appan.activity.wall.EditPost"
+279-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:252:13-66
+280            android:launchMode="singleTop"
+280-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:253:13-43
+281            android:screenOrientation="portrait"
+281-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:254:13-49
+282            android:windowSoftInputMode="stateAlwaysHidden" />
+282-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:255:13-60
+283        <activity
+283-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:256:9-259:52
+284            android:name="com.yapue.appan.activity.wall.ViewPost"
+284-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:257:13-66
+285            android:launchMode="singleTop"
+285-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:258:13-43
+286            android:screenOrientation="portrait" />
+286-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:259:13-49
+287        <activity
+287-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:260:9-263:52
+288            android:name="com.yapue.appan.activity.wall.PostWall"
+288-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:261:13-66
+289            android:launchMode="singleTop"
+289-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:262:13-43
+290            android:screenOrientation="portrait" />
+290-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:263:13-49
+291        <activity
+291-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:264:9-267:52
+292            android:name="com.yapue.appan.activity.wall.MyPost"
+292-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:265:13-64
+293            android:launchMode="singleTop"
+293-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:266:13-43
+294            android:screenOrientation="portrait" />
+294-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:267:13-49
+295        <activity
+295-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:268:9-271:52
+296            android:name="com.yapue.appan.activity.Memories.GalleryActivity"
+296-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:269:13-77
+297            android:launchMode="singleTop"
+297-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:270:13-43
+298            android:screenOrientation="portrait" />
+298-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:271:13-49
+299        <activity
+299-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:272:9-275:52
+300            android:name="com.yapue.appan.activity.MyOrder.ShopifyMyOrderDetail"
+300-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:273:13-81
+301            android:launchMode="singleTop"
+301-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:274:13-43
+302            android:screenOrientation="portrait" />
+302-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:275:13-49
+303        <activity
+303-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:276:9-279:52
+304            android:name="com.yapue.appan.activity.PaymentViewActivity"
+304-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:277:13-72
+305            android:launchMode="singleTop"
+305-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:278:13-43
+306            android:screenOrientation="portrait" />
+306-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:279:13-49
+307
+308        <meta-data
+308-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:281:9-283:72
+309            android:name="io.fabric.ApiKey"
+309-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:282:13-44
+310            android:value="6956ee260d8a46359094304995f81a6c154130cd" />
+310-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:283:13-69
+311
+312        <activity android:name="com.yapue.appan.AppIntro" />
+312-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:285:9-61
+312-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:285:19-58
+313        <activity
+313-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:286:9-289:63
+314            android:name="com.yapue.appan.activity.food.WriteReview"
+314-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:287:13-69
+315            android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert"
+315-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:288:13-75
+316            android:windowSoftInputMode="stateAlwaysHidden" />
+316-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:289:13-60
+317        <activity
+317-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:290:9-292:62
+318            android:name="com.yapue.appan.multipleimagepicker.MultiImageSelectorActivity"
+318-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:291:13-90
+319            android:configChanges="orientation|screenSize" />
+319-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:292:13-59
+320        <activity
+320-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:293:9-295:62
+321            android:name="com.yapue.appan.multipleimagepicker.MultiMyPetImageSelectorActivity"
+321-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:294:13-95
+322            android:configChanges="orientation|screenSize" />
+322-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:295:13-59
+323        <activity
+323-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:296:9-299:52
+324            android:name="com.yapue.appan.activity.Memories.AddMultipleImage"
+324-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:297:13-78
+325            android:launchMode="singleTop"
+325-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:298:13-43
+326            android:screenOrientation="portrait" />
+326-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:299:13-49
+327        <activity android:name="com.yapue.appan.activity.tracker.TrackerActivity" /> <!-- [START firebase_service] -->
+327-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:300:9-85
+327-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:300:19-82
+328
+329        <meta-data
+329-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:302:9-304:67
+330            android:name="com.google.firebase.messaging.default_notification_icon"
+330-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:303:13-83
+331            android:resource="@mipmap/ic_skylight_notification" />
+331-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:304:13-64
+332        <meta-data
+332-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:305:9-307:55
+333            android:name="com.google.firebase.messaging.default_notification_color"
+333-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:306:13-84
+334            android:resource="@color/orange_accent" />
+334-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:307:13-52
+335
+336        <service android:name="com.yapue.appan.MyFirebaseMessagingService" >
+336-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:309:9-313:19
+336-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:309:18-75
+337            <intent-filter>
+337-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:310:13-312:29
+338                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+338-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:311:17-78
+338-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:311:25-75
+339            </intent-filter>
+340        </service> <!-- [END firebase_service] -->
+341        <receiver android:name="com.yapue.appan.utils.SmsReceiver" >
+341-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:314:9-318:20
+341-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:314:19-67
+342            <intent-filter>
+342-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:315:13-317:29
+343                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+343-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:316:17-82
+343-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:316:25-79
+344            </intent-filter>
+345        </receiver>
+346
+347        <activity
+347-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:320:9-323:52
+348            android:name="com.yapue.appan.activity.chat.ChatActivity"
+348-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:321:13-70
+349            android:launchMode="singleTop"
+349-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:322:13-43
+350            android:screenOrientation="portrait" />
+350-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:323:13-49
+351        <activity
+351-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:324:9-327:52
+352            android:name="com.yapue.appan.activity.chat.OneTwoOneChatDemo"
+352-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:325:13-75
+353            android:launchMode="singleTop"
+353-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:326:13-43
+354            android:screenOrientation="portrait" />
+354-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:327:13-49
+355        <activity
+355-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:328:9-331:52
+356            android:name="com.yapue.appan.activity.notification.NotificationActivity"
+356-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:329:13-86
+357            android:launchMode="singleTop"
+357-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:330:13-43
+358            android:screenOrientation="portrait" />
+358-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:331:13-49
+359        <activity
+359-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:332:9-335:52
+360            android:name="com.yapue.appan.activity.contactmessage.ContactMessageActivity"
+360-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:333:13-90
+361            android:launchMode="singleTop"
+361-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:334:13-43
+362            android:screenOrientation="portrait" />
+362-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:335:13-49
+363        <activity
+363-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:336:9-340:63
+364            android:name="com.yapue.appan.activity.food.OrdershipedActivity"
+364-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:337:13-77
+365            android:launchMode="singleTop"
+365-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:339:13-43
+366            android:screenOrientation="portrait"
+366-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:338:13-49
+367            android:windowSoftInputMode="stateAlwaysHidden" />
+367-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:340:13-60
+368        <activity
+368-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:341:9-345:63
+369            android:name="com.yapue.appan.activity.nearbypetlist.ContactPetListActivity"
+369-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:342:13-89
+370            android:launchMode="singleTop"
+370-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:344:13-43
+371            android:screenOrientation="portrait"
+371-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:343:13-49
+372            android:windowSoftInputMode="stateAlwaysHidden" />
+372-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:345:13-60
+373        <activity
+373-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:346:9-350:63
+374            android:name="com.yapue.appan.utils.ImageZoomActivity"
+374-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:347:13-67
+375            android:launchMode="singleTop"
+375-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:349:13-43
+376            android:screenOrientation="portrait"
+376-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:348:13-49
+377            android:windowSoftInputMode="stateAlwaysHidden" />
+377-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:350:13-60
+378        <activity
+378-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:351:9-355:63
+379            android:name="com.yapue.appan.activity.event.EventCreate"
+379-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:352:13-70
+380            android:launchMode="singleTop"
+380-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:354:13-43
+381            android:screenOrientation="portrait"
+381-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:353:13-49
+382            android:windowSoftInputMode="stateAlwaysHidden" />
+382-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:355:13-60
+383        <activity
+383-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:356:9-360:63
+384            android:name="com.yapue.appan.activity.event.ShowMyEventActivity"
+384-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:357:13-78
+385            android:launchMode="singleTop"
+385-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:359:13-43
+386            android:screenOrientation="portrait"
+386-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:358:13-49
+387            android:windowSoftInputMode="stateAlwaysHidden" />
+387-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:360:13-60
+388        <activity
+388-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:361:9-365:63
+389            android:name="com.yapue.appan.activity.event.MyEventDescriptionActivity"
+389-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:362:13-85
+390            android:launchMode="singleTop"
+390-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:364:13-43
+391            android:screenOrientation="portrait"
+391-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:363:13-49
+392            android:windowSoftInputMode="stateAlwaysHidden" />
+392-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:365:13-60
+393        <activity
+393-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:366:9-370:63
+394            android:name="com.yapue.appan.activity.event.OtherEventDescriptionActivity"
+394-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:367:13-88
+395            android:launchMode="singleTop"
+395-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:369:13-43
+396            android:screenOrientation="portrait"
+396-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:368:13-49
+397            android:windowSoftInputMode="stateAlwaysHidden" />
+397-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:370:13-60
+398        <activity
+398-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:371:9-375:63
+399            android:name="com.yapue.appan.activity.event.ShowJoinedEventUserActivity"
+399-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:372:13-86
+400            android:launchMode="singleTop"
+400-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:374:13-43
+401            android:screenOrientation="portrait"
+401-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:373:13-49
+402            android:windowSoftInputMode="stateAlwaysHidden" />
+402-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:375:13-60
+403        <activity
+403-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:376:9-380:63
+404            android:name="com.yapue.appan.activity.petprofile.PetViewActivity"
+404-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:377:13-79
+405            android:launchMode="singleTop"
+405-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:379:13-43
+406            android:screenOrientation="portrait"
+406-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:378:13-49
+407            android:windowSoftInputMode="stateAlwaysHidden" />
+407-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:380:13-60
+408        <activity
+408-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:381:9-385:63
+409            android:name="com.yapue.appan.activity.petmarket.CommentPetMarket"
+409-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:382:13-79
+410            android:launchMode="singleTop"
+410-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:384:13-43
+411            android:screenOrientation="portrait"
+411-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:383:13-49
+412            android:windowSoftInputMode="stateAlwaysHidden" />
+412-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:385:13-60
+413        <activity
+413-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:386:9-390:63
+414            android:name="com.yapue.appan.activity.petprofile.UserPetProfileForWallActivity"
+414-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:387:13-93
+415            android:launchMode="singleTop"
+415-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:389:13-43
+416            android:screenOrientation="portrait"
+416-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:388:13-49
+417            android:windowSoftInputMode="stateAlwaysHidden" />
+417-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:390:13-60
+418        <activity
+418-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:391:9-395:63
+419            android:name="com.yapue.appan.activity.petmarket.ShowPetMarketActivity"
+419-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:392:13-84
+420            android:launchMode="singleTop"
+420-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:394:13-43
+421            android:screenOrientation="portrait"
+421-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:393:13-49
+422            android:windowSoftInputMode="stateAlwaysHidden" />
+422-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:395:13-60
+423        <activity
+423-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:396:9-400:63
+424            android:name="com.yapue.appan.activity.petmarket.AddPetMarketActivity"
+424-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:397:13-83
+425            android:launchMode="singleTop"
+425-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:399:13-43
+426            android:screenOrientation="portrait"
+426-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:398:13-49
+427            android:windowSoftInputMode="stateAlwaysHidden" />
+427-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:400:13-60
+428        <activity
+428-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:401:9-405:63
+429            android:name="com.yapue.appan.activity.petprofile.PetFolowersActivity"
+429-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:402:13-83
+430            android:launchMode="singleTop"
+430-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:404:13-43
+431            android:screenOrientation="portrait"
+431-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:403:13-49
+432            android:windowSoftInputMode="stateAlwaysHidden" />
+432-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:405:13-60
+433        <activity
+433-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:406:9-410:63
+434            android:name="com.yapue.appan.utils.imagepager.ImageviewpagerActivity"
+434-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:407:13-83
+435            android:launchMode="singleTop"
+435-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:409:13-43
+436            android:screenOrientation="portrait"
+436-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:408:13-49
+437            android:windowSoftInputMode="stateAlwaysHidden" />
+437-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:410:13-60
+438        <activity
+438-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:411:9-415:63
+439            android:name="com.yapue.appan.fragment.NearBy.ShopActivity"
+439-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:412:13-72
+440            android:launchMode="singleTop"
+440-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:414:13-43
+441            android:screenOrientation="portrait"
+441-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:413:13-49
+442            android:windowSoftInputMode="stateAlwaysHidden" />
+442-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:415:13-60
+443        <activity
+443-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:416:9-420:63
+444            android:name="com.yapue.appan.fragment.NearBy.SalonActivity"
+444-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:417:13-73
+445            android:launchMode="singleTop"
+445-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:419:13-43
+446            android:screenOrientation="portrait"
+446-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:418:13-49
+447            android:windowSoftInputMode="stateAlwaysHidden" />
+447-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:420:13-60
+448        <activity
+448-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:421:9-425:63
+449            android:name="com.yapue.appan.fragment.NearBy.TraninerActivity"
+449-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:422:13-76
+450            android:launchMode="singleTop"
+450-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:424:13-43
+451            android:screenOrientation="portrait"
+451-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:423:13-49
+452            android:windowSoftInputMode="stateAlwaysHidden" />
+452-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:425:13-60
+453        <activity
+453-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:426:9-430:63
+454            android:name="com.yapue.appan.fragment.NearBy.HostelActivity"
+454-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:427:13-74
+455            android:launchMode="singleTop"
+455-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:429:13-43
+456            android:screenOrientation="portrait"
+456-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:428:13-49
+457            android:windowSoftInputMode="stateAlwaysHidden" />
+457-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:430:13-60
+458        <activity
+458-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:431:9-435:63
+459            android:name="com.yapue.appan.fragment.NearBy.VaterinaryActivity"
+459-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:432:13-78
+460            android:launchMode="singleTop"
+460-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:434:13-43
+461            android:screenOrientation="portrait"
+461-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:433:13-49
+462            android:windowSoftInputMode="stateAlwaysHidden" />
+462-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:435:13-60
+463        <activity
+463-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:436:9-440:63
+464            android:name="com.yapue.appan.activity.petmarket.ShowMyPetAdActivity"
+464-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:437:13-82
+465            android:launchMode="singleTop"
+465-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:439:13-43
+466            android:screenOrientation="portrait"
+466-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:438:13-49
+467            android:windowSoftInputMode="stateAlwaysHidden" />
+467-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:440:13-60
+468        <activity
+468-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:441:9-445:63
+469            android:name="com.yapue.appan.activity.filter.FilterPetMarketActivity"
+469-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:442:13-83
+470            android:launchMode="singleTop"
+470-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:444:13-43
+471            android:screenOrientation="portrait"
+471-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:443:13-49
+472            android:windowSoftInputMode="stateAlwaysHidden" />
+472-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:445:13-60
+473        <activity
+473-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:446:9-450:63
+474            android:name="com.yapue.appan.activity.petmarket.CatagoryPetMarket"
+474-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:447:13-80
+475            android:launchMode="singleTop"
+475-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:449:13-43
+476            android:screenOrientation="portrait"
+476-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:448:13-49
+477            android:windowSoftInputMode="stateAlwaysHidden" />
+477-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:450:13-60
+478        <activity
+478-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:451:9-467:20
+479            android:name="com.schibstedspain.leku.LocationPickerActivity"
+479-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:452:13-74
+480            android:label="@string/leku_title_activity_location_picker"
+480-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:453:13-72
+481            android:parentActivityName="com.yapue.appan.activity.UserProfile.UserProfileActivity"
+481-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:454:13-98
+482            android:theme="@style/AppTheme.Map"
+482-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:455:13-48
+483            android:windowSoftInputMode="adjustPan" >
+483-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:456:13-52
+484            <intent-filter>
+484-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:457:13-459:29
+485                <action android:name="android.intent.action.SEARCH" />
+485-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:458:17-71
+485-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:458:25-68
+486            </intent-filter>
+487
+488            <meta-data
+488-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:461:13-463:59
+489                android:name="android.app.searchable"
+489-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:462:17-54
+490                android:resource="@xml/leku_searchable" />
+490-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:463:17-56
+491            <meta-data
+491-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:464:13-466:92
+492                android:name="android.support.PARENT_ACTIVITY"
+492-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:465:17-63
+493                android:value="com.yapue.appan.activity.UserProfile.UserProfileActivity" />
+493-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:466:17-89
+494        </activity>
+495
+496        <meta-data
+496-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:469:9-471:55
+497            android:name="com.razorpay.ApiKey"
+497-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:470:13-47
+498            android:value="rzp_test_pRpz9FLFnbcyXX" /> <!-- rzp_live_A65XrWACGxqepT -->
+498-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:471:13-52
+499        <!-- rzp_test_pRpz9FLFnbcyXX -->
+500        <activity android:name="com.yapue.appan.activity.food.AddressActivity" />
+500-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:473:9-82
+500-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:473:19-79
+501        <activity android:name="com.yapue.appan.ui.AlarmLandingPageActivity" />
+501-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:474:9-80
+501-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:474:19-77
+502
+503        <receiver android:name="com.yapue.appan.service.AlarmReceiver" />
+503-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:476:9-74
+503-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:476:19-71
+504
+505        <activity
+505-->[com.github.Flutterwave:rave-android:1.0.39] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8ac43381ca2c5e8bb0353be971b509dd\jetified-rave-android-1.0.39\AndroidManifest.xml:15:9-18:52
+506            android:name="com.flutterwave.raveandroid.RavePayActivity"
+506-->[com.github.Flutterwave:rave-android:1.0.39] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8ac43381ca2c5e8bb0353be971b509dd\jetified-rave-android-1.0.39\AndroidManifest.xml:16:13-71
+507            android:label="@string/app_name"
+507-->[com.github.Flutterwave:rave-android:1.0.39] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8ac43381ca2c5e8bb0353be971b509dd\jetified-rave-android-1.0.39\AndroidManifest.xml:17:13-45
+508            android:screenOrientation="portrait" />
+508-->[com.github.Flutterwave:rave-android:1.0.39] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8ac43381ca2c5e8bb0353be971b509dd\jetified-rave-android-1.0.39\AndroidManifest.xml:18:13-49
+509        <activity
+509-->[com.github.Flutterwave:rave-android:1.0.39] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8ac43381ca2c5e8bb0353be971b509dd\jetified-rave-android-1.0.39\AndroidManifest.xml:19:9-21:52
+510            android:name="com.flutterwave.raveandroid.VerificationActivity"
+510-->[com.github.Flutterwave:rave-android:1.0.39] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8ac43381ca2c5e8bb0353be971b509dd\jetified-rave-android-1.0.39\AndroidManifest.xml:20:13-76
+511            android:screenOrientation="portrait" />
+511-->[com.github.Flutterwave:rave-android:1.0.39] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8ac43381ca2c5e8bb0353be971b509dd\jetified-rave-android-1.0.39\AndroidManifest.xml:21:13-49
+512        <activity
+512-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:23:9-26:73
+513            android:name="com.mercadopago.android.px.internal.features.PaymentMethodsActivity"
+513-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:24:13-95
+514            android:label="@string/px_title_activity_payment_methods"
+514-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:25:13-70
+515            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+515-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:26:13-70
+516        <activity
+516-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:27:9-30:73
+517            android:name="com.mercadopago.android.px.internal.features.BankDealsActivity"
+517-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:28:13-90
+518            android:label="@string/px_title_activity_bank_deals"
+518-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:29:13-65
+519            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+519-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:30:13-70
+520        <activity
+520-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:31:9-34:73
+521            android:name="com.mercadopago.android.px.internal.features.TermsAndConditionsActivity"
+521-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:32:13-99
+522            android:label="@string/px_title_activity_terms_and_conditions"
+522-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:33:13-75
+523            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+523-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:34:13-70
+524        <activity
+524-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:35:9-37:73
+525            android:name="com.mercadopago.android.px.internal.features.CheckoutActivity"
+525-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:36:13-89
+526            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+526-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:37:13-70
+527        <activity
+527-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:38:9-42:58
+528            android:name="com.mercadopago.android.px.internal.features.guessing_card.GuessingCardActivity"
+528-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:39:13-107
+529            android:screenOrientation="portrait"
+529-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:40:13-49
+530            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar"
+530-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:41:13-70
+531            android:windowSoftInputMode="adjustResize" />
+531-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:42:13-55
+532        <activity
+532-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:43:9-45:73
+533            android:name="com.mercadopago.android.px.internal.features.PaymentVaultActivity"
+533-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:44:13-93
+534            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+534-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:45:13-70
+535        <activity
+535-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:46:9-48:73
+536            android:name="com.mercadopago.android.px.internal.features.InstallmentsActivity"
+536-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:47:13-93
+537            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+537-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:48:13-70
+538        <activity
+538-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:49:9-51:73
+539            android:name="com.mercadopago.android.px.internal.features.IssuersActivity"
+539-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:50:13-88
+540            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+540-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:51:13-70
+541        <activity
+541-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:52:9-54:73
+542            android:name="com.mercadopago.android.px.internal.features.cardvault.CardVaultActivity"
+542-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:53:13-100
+543            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+543-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:54:13-70
+544        <activity
+544-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:55:9-57:73
+545            android:name="com.mercadopago.android.px.internal.features.ErrorActivity"
+545-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:56:13-86
+546            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+546-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:57:13-70
+547        <activity
+547-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:58:9-60:73
+548            android:name="com.mercadopago.android.px.internal.features.paymentresult.PaymentResultActivity"
+548-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:59:13-108
+549            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+549-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:60:13-70
+550        <activity
+550-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:61:9-65:58
+551            android:name="com.mercadopago.android.px.internal.features.SecurityCodeActivity"
+551-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:62:13-93
+552            android:screenOrientation="portrait"
+552-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:63:13-49
+553            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar"
+553-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:64:13-70
+554            android:windowSoftInputMode="stateVisible" />
+554-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:65:13-55
+555        <activity
+555-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:66:9-68:73
+556            android:name="com.mercadopago.android.px.internal.features.PaymentTypesActivity"
+556-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:67:13-93
+557            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+557-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:68:13-70
+558        <activity
+558-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:69:9-71:73
+559            android:name="com.mercadopago.android.px.internal.features.ReviewPaymentMethodsActivity"
+559-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:70:13-101
+560            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+560-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:71:13-70
+561        <activity
+561-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:72:9-74:73
+562            android:name="com.mercadopago.android.px.internal.features.PayerInformationActivity"
+562-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:73:13-97
+563            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+563-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:74:13-70
+564        <activity
+564-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:75:9-77:73
+565            android:name="com.mercadopago.android.px.internal.features.hooks.HookActivity"
+565-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:76:13-91
+566            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+566-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:77:13-70
+567        <activity
+567-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:78:9-80:73
+568            android:name="com.mercadopago.android.px.internal.features.plugins.PaymentMethodPluginActivity"
+568-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:79:13-108
+569            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+569-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:80:13-70
+570        <activity
+570-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:81:9-83:73
+571            android:name="com.mercadopago.android.px.internal.features.plugins.PaymentProcessorActivity"
+571-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:82:13-105
+572            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+572-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:83:13-70
+573        <activity
+573-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:84:9-86:73
+574            android:name="com.mercadopago.android.px.internal.features.business_result.BusinessPaymentResultActivity"
+574-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:85:13-118
+575            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+575-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:86:13-70
+576        <activity
+576-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:87:9-89:73
+577            android:name="com.mercadopago.android.px.internal.features.review_and_confirm.ReviewAndConfirmActivity"
+577-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:88:13-116
+578            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+578-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:89:13-70
+579        <activity
+579-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:90:9-92:73
+580            android:name="com.mercadopago.android.px.internal.features.BankDealDetailActivity"
+580-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:91:13-95
+581            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+581-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:92:13-70
+582        <activity
+582-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:93:9-95:73
+583            android:name="com.mercadopago.android.px.internal.features.guessing_card.card_association_result.CardAssociationResultSuccessActivity"
+583-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:94:13-147
+584            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+584-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:95:13-70
+585        <activity
+585-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:96:9-98:73
+586            android:name="com.mercadopago.android.px.internal.features.guessing_card.card_association_result.CardAssociationResultErrorActivity"
+586-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:97:13-145
+587            android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
+587-->[com.mercadopago.android.px:checkout:4.5.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\20b77da5280cdb291ce7a105da9f530c\jetified-checkout-4.5.2\AndroidManifest.xml:98:13-70
+588        <activity android:name="com.mercadolibre.android.ui.activities.LayoutUtilsActivity" >
+588-->[com.mercadolibre.android:ui_legacy:5.11.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\ec02b5140ea0fd94ac32e73fa01583f9\jetified-ui_legacy-5.11.0\AndroidManifest.xml:12:9-13:20
+588-->[com.mercadolibre.android:ui_legacy:5.11.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\ec02b5140ea0fd94ac32e73fa01583f9\jetified-ui_legacy-5.11.0\AndroidManifest.xml:12:19-92
+589        </activity>
+590        <activity android:name="com.mercadolibre.android.ui.activities.MLImageTestActivity" /> <!-- Autocomplete -->
+590-->[com.mercadolibre.android:ui_legacy:5.11.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\ec02b5140ea0fd94ac32e73fa01583f9\jetified-ui_legacy-5.11.0\AndroidManifest.xml:14:9-95
+590-->[com.mercadolibre.android:ui_legacy:5.11.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\ec02b5140ea0fd94ac32e73fa01583f9\jetified-ui_legacy-5.11.0\AndroidManifest.xml:14:19-92
+591        <activity
+591-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:16:9-23:20
+592            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+592-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:17:13-91
+593            android:exported="false"
+593-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:18:13-37
+594            android:hardwareAccelerated="true"
+594-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:19:13-47
+595            android:label="@string/places_autocomplete_label"
+595-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:20:13-62
+596            android:theme="@style/PlacesAutocompleteThemeOverlay"
+596-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:21:13-66
+597            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" >
+597-->[com.google.android.libraries.places:places-compat:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\7c06377752582f6e9d77d7d66103f2e6\jetified-places-compat-2.2.0\AndroidManifest.xml:22:13-71
+598        </activity>
+599        <activity
+599-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:14:9-17:47
+600            android:name="com.paytm.pgsdk.PaytmPGActivity"
+600-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:15:13-59
+601            android:screenOrientation="portrait"
+601-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:16:13-49
+602            android:theme="@style/AppTheme" />
+602-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:17:13-44
+603
+604        <service
+604-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:19:9-21:40
+605            android:name="com.paytm.pgsdk.IntentServicePostNotification"
+605-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:20:13-73
+606            android:exported="false" />
+606-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:21:13-37
+607        <service
+607-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:22:9-24:40
+608            android:name="com.paytm.pgsdk.IntentServicePreNotification"
+608-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:23:13-72
+609            android:exported="false" />
+609-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:24:13-37
+610        <service
+610-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:25:9-28:39
+611            android:name="com.paytm.pgsdk.easypay.utils.EasypayLoaderService"
+611-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:26:13-78
+612            android:enabled="true"
+612-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:27:13-35
+613            android:exported="true" />
+613-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:28:13-36
+614        <service
+614-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:29:9-32:39
+615            android:name="com.paytm.pgsdk.easypay.utils.AnalyticsService"
+615-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:30:13-74
+616            android:enabled="true"
+616-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:31:13-35
+617            android:exported="true" />
+617-->[com.paytm:pgplussdk:1.3.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\84b54a72fe065fd06434284d6e1417a3\jetified-pgplussdk-1.3.3\AndroidManifest.xml:32:13-36
+618        <!--
+619             FirebaseMessagingService performs security checks at runtime,
+620             but set to not exported to explicitly avoid allowing another app to call it.
+621        -->
+622        <service
+622-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:28:9-34:19
+623            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+623-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:29:13-82
+624            android:exported="false" >
+624-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:30:13-37
+625            <intent-filter android:priority="-500" >
+625-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:310:13-312:29
+626                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+626-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:311:17-78
+626-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:311:25-75
+627            </intent-filter>
+628        </service>
+629        <service
+629-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:35:9-41:19
+630            android:name="com.google.firebase.components.ComponentDiscoveryService"
+630-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:36:13-84
+631            android:directBootAware="true"
+631-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d7b410dece98e4e6dc656f74cbbafa74\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+632            android:exported="false" >
+632-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:37:13-37
+633            <meta-data
+633-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:38:13-40:85
+634                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+634-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:39:17-119
+635                android:value="com.google.firebase.components.ComponentRegistrar" />
+635-->[com.google.firebase:firebase-messaging:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\e416dd9e456c050a47389f54e280697c\jetified-firebase-messaging-20.1.6\AndroidManifest.xml:40:17-82
+636            <meta-data
+636-->[com.google.android.gms:play-services-measurement-api:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\fa28d1a6ef3f498e8d329574a28ad7aa\jetified-play-services-measurement-api-17.4.0\AndroidManifest.xml:30:13-32:85
+637                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+637-->[com.google.android.gms:play-services-measurement-api:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\fa28d1a6ef3f498e8d329574a28ad7aa\jetified-play-services-measurement-api-17.4.0\AndroidManifest.xml:31:17-139
+638                android:value="com.google.firebase.components.ComponentRegistrar" />
+638-->[com.google.android.gms:play-services-measurement-api:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\fa28d1a6ef3f498e8d329574a28ad7aa\jetified-play-services-measurement-api-17.4.0\AndroidManifest.xml:32:17-82
+639            <meta-data
+639-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:32:13-34:85
+640                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+640-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:33:17-96
+641                android:value="com.google.firebase.components.ComponentRegistrar" />
+641-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:34:17-82
+642            <meta-data
+642-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d963291ad9c3a6ebc7d2c85bec5b102f\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+643                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+643-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d963291ad9c3a6ebc7d2c85bec5b102f\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+644                android:value="com.google.firebase.components.ComponentRegistrar" />
+644-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d963291ad9c3a6ebc7d2c85bec5b102f\jetified-firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+645            <meta-data
+645-->[com.google.firebase:firebase-installations:16.2.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\9093a6794fbe4eb29d5782e812b4e3a4\jetified-firebase-installations-16.2.2\AndroidManifest.xml:17:13-19:85
+646                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+646-->[com.google.firebase:firebase-installations:16.2.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\9093a6794fbe4eb29d5782e812b4e3a4\jetified-firebase-installations-16.2.2\AndroidManifest.xml:18:17-127
+647                android:value="com.google.firebase.components.ComponentRegistrar" />
+647-->[com.google.firebase:firebase-installations:16.2.2] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\9093a6794fbe4eb29d5782e812b4e3a4\jetified-firebase-installations-16.2.2\AndroidManifest.xml:19:17-82
+648        </service> <!-- Needs to be explicitly declared on P+ -->
+649        <uses-library
+649-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1eccb7f0d7349dde76f4558ee10bd4a4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+650            android:name="org.apache.http.legacy"
+650-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1eccb7f0d7349dde76f4558ee10bd4a4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+651            android:required="false" />
+651-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1eccb7f0d7349dde76f4558ee10bd4a4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+652
+653        <receiver android:name="com.razorpay.RzpTokenReceiver" >
+653-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:12:9-16:20
+653-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:12:19-63
+654            <intent-filter>
+654-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:13:13-15:29
+655                <action android:name="rzp.device_token.share" />
+655-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:14:17-65
+655-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:14:25-62
+656            </intent-filter>
+657        </receiver>
+658
+659        <activity
+659-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:18:9-29:20
+660            android:name="com.razorpay.CheckoutActivity"
+660-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:19:13-57
+661            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+661-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:20:13-83
+662            android:theme="@style/CheckoutTheme" >
+662-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:21:13-49
+663            <intent-filter>
+663-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:22:13-28:29
+664                <action android:name="android.intent.action.MAIN" />
+664-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:80:17-69
+664-->D:\__PROJECTS__\App Dev\ClientsDev\Restart\app\src\main\AndroidManifest.xml:80:25-66
+665
+666                <data
+666-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:25:17-27:47
+667                    android:host="rzp.io"
+667-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:26:21-42
+668                    android:scheme="io.rzp" />
+668-->[com.razorpay:checkout:1.5.4] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\8f602820473dce973429686fc9c32380\jetified-checkout-1.5.4\AndroidManifest.xml:27:21-44
+669            </intent-filter>
+670        </activity>
+671
+672        <provider
+672-->[com.squareup.picasso:picasso:2.71828] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\b0b273b69cb87b36bb4932852f23104c\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+673            android:name="com.squareup.picasso.PicassoProvider"
+673-->[com.squareup.picasso:picasso:2.71828] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\b0b273b69cb87b36bb4932852f23104c\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+674            android:authorities="com.yapue.appan.com.squareup.picasso"
+674-->[com.squareup.picasso:picasso:2.71828] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\b0b273b69cb87b36bb4932852f23104c\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+675            android:exported="false" />
+675-->[com.squareup.picasso:picasso:2.71828] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\b0b273b69cb87b36bb4932852f23104c\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+676        <provider
+676-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\bfc5cb0b20ace13f071bbff24642f592\jetified-crashlytics-2.10.1\AndroidManifest.xml:19:9-23:38
+677            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+677-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\bfc5cb0b20ace13f071bbff24642f592\jetified-crashlytics-2.10.1\AndroidManifest.xml:20:13-75
+678            android:authorities="com.yapue.appan.crashlyticsinitprovider"
+678-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\bfc5cb0b20ace13f071bbff24642f592\jetified-crashlytics-2.10.1\AndroidManifest.xml:21:13-75
+679            android:exported="false"
+679-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\bfc5cb0b20ace13f071bbff24642f592\jetified-crashlytics-2.10.1\AndroidManifest.xml:22:13-37
+680            android:initOrder="90" />
+680-->[com.crashlytics.sdk.android:crashlytics:2.10.1] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\bfc5cb0b20ace13f071bbff24642f592\jetified-crashlytics-2.10.1\AndroidManifest.xml:23:13-35
+681
+682        <receiver
+682-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:37:9-44:20
+683            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+683-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:38:13-78
+684            android:exported="true"
+684-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:39:13-36
+685            android:permission="com.google.android.c2dm.permission.SEND" >
+685-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:40:13-73
+686            <intent-filter>
+686-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:41:13-43:29
+687                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+687-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:42:17-81
+687-->[com.google.firebase:firebase-iid:20.1.6] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\10189fd836acd29e5de3cb38ee7537fa\jetified-firebase-iid-20.1.6\AndroidManifest.xml:42:25-78
+688            </intent-filter>
+689        </receiver>
+690        <receiver
+690-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:29:9-33:20
+691            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+691-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:30:13-85
+692            android:enabled="true"
+692-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:31:13-35
+693            android:exported="false" >
+693-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:32:13-37
+694        </receiver>
+695
+696        <service
+696-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:35:9-38:40
+697            android:name="com.google.android.gms.measurement.AppMeasurementService"
+697-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:36:13-84
+698            android:enabled="true"
+698-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:37:13-35
+699            android:exported="false" />
+699-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:38:13-37
+700        <service
+700-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:39:9-43:72
+701            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+701-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:40:13-87
+702            android:enabled="true"
+702-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:41:13-35
+703            android:exported="false"
+703-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:42:13-37
+704            android:permission="android.permission.BIND_JOB_SERVICE" />
+704-->[com.google.android.gms:play-services-measurement:17.4.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\0049d99913bd0ebe2e0d6816d40c8bbd\jetified-play-services-measurement-17.4.0\AndroidManifest.xml:43:13-69
+705
+706        <provider
+706-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d7b410dece98e4e6dc656f74cbbafa74\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+707            android:name="com.google.firebase.provider.FirebaseInitProvider"
+707-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d7b410dece98e4e6dc656f74cbbafa74\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+708            android:authorities="com.yapue.appan.firebaseinitprovider"
+708-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d7b410dece98e4e6dc656f74cbbafa74\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+709            android:exported="false"
+709-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d7b410dece98e4e6dc656f74cbbafa74\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+710            android:initOrder="100" />
+710-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\d7b410dece98e4e6dc656f74cbbafa74\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+711
+712        <activity
+712-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\76704ef3644996a8dec3ec29c235164c\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+713            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+713-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\76704ef3644996a8dec3ec29c235164c\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+714            android:exported="false"
+714-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\76704ef3644996a8dec3ec29c235164c\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+715            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+715-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\76704ef3644996a8dec3ec29c235164c\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+716        <activity
+716-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:29:9-33:64
+717            android:name="com.google.android.gms.ads.AdActivity"
+717-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:30:13-65
+718            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+718-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:31:13-122
+719            android:exported="false"
+719-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:32:13-37
+720            android:theme="@android:style/Theme.Translucent" />
+720-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:33:13-61
+721
+722        <provider
+722-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:35:9-39:39
+723            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+723-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:36:13-76
+724            android:authorities="com.yapue.appan.mobileadsinitprovider"
+724-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:37:13-73
+725            android:exported="false"
+725-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:38:13-37
+726            android:initOrder="100" />
+726-->[com.google.android.gms:play-services-ads-lite:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\eff30db680e2d48bc7a5ebb36bfd1a3b\jetified-play-services-ads-lite-17.0.0\AndroidManifest.xml:39:13-36
+727
+728        <meta-data
+728-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\87926d6673b1968abe320cb3909b2f7b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+729            android:name="com.google.android.gms.version"
+729-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\87926d6673b1968abe320cb3909b2f7b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+730            android:value="@integer/google_play_services_version" />
+730-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\87926d6673b1968abe320cb3909b2f7b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+731
+732        <provider
+732-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\55b1d696f5c3a8864dcd6af14347c8a7\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+733            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+733-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\55b1d696f5c3a8864dcd6af14347c8a7\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+734            android:authorities="com.yapue.appan.lifecycle-process"
+734-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\55b1d696f5c3a8864dcd6af14347c8a7\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+735            android:exported="false"
+735-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\55b1d696f5c3a8864dcd6af14347c8a7\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+736            android:multiprocess="true" />
+736-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\55b1d696f5c3a8864dcd6af14347c8a7\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+737
+738        <service
+738-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\2cf3aad21e5d515ae762f67749992915\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+739            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+739-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\2cf3aad21e5d515ae762f67749992915\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+740            android:exported="false" >
+740-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\2cf3aad21e5d515ae762f67749992915\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+741            <meta-data
+741-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\2cf3aad21e5d515ae762f67749992915\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+742                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+742-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\2cf3aad21e5d515ae762f67749992915\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+743                android:value="cct" />
+743-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\2cf3aad21e5d515ae762f67749992915\jetified-transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+744        </service>
+745        <service
+745-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1f22ef9593d2343682443dfff2afcbb8\jetified-transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+746            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+746-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1f22ef9593d2343682443dfff2afcbb8\jetified-transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+747            android:exported="false"
+747-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1f22ef9593d2343682443dfff2afcbb8\jetified-transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+748            android:permission="android.permission.BIND_JOB_SERVICE" >
+748-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1f22ef9593d2343682443dfff2afcbb8\jetified-transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+749        </service>
+750
+751        <receiver
+751-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1f22ef9593d2343682443dfff2afcbb8\jetified-transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+752            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+752-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1f22ef9593d2343682443dfff2afcbb8\jetified-transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+753            android:exported="false" />
+753-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\Fahima Ahamed Khan\.gradle\caches\transforms-2\files-2.1\1f22ef9593d2343682443dfff2afcbb8\jetified-transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+754    </application>
+755
+756</manifest>

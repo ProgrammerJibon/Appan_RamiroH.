@@ -1,0 +1,72 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\__PROJECTS__\\App Dev\\ClientsDev\\Restart\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\7015643d05be84b4cb99f5e02c7eb52d\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\11feece758084356f8926f705d35a287\\jetified-ui-5.11.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,125,177,231,284",
+                        "endColumns": "69,51,53,52,59",
+                        "endOffsets": "120,172,226,279,339"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "264,334,386,440,493",
+                        "endColumns": "69,51,53,52,59",
+                        "endOffsets": "329,381,435,488,548"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\5bccce08078e61bbc1a3ff1b60032211\\material-1.0.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "13",
+                        "startColumns": "4",
+                        "startOffsets": "703",
+                        "endLines": "16",
+                        "endColumns": "10",
+                        "endOffsets": "870"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Fahima Ahamed Khan\\.gradle\\caches\\transforms-2\\files-2.1\\bc35bd15eb342f5d47b3a738e1d770e0\\jetified-bottomsheet-1.5.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,101,153",
+                        "endColumns": "45,51,51",
+                        "endOffsets": "96,148,200"
+                    },
+                    "to": {
+                        "startLines": "10,11,12",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "553,599,651",
+                        "endColumns": "45,51,51",
+                        "endOffsets": "594,646,698"
+                    }
+                }
+            ]
+        }
+    ]
+}
