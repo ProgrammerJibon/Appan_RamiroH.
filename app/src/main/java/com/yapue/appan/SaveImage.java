@@ -4,11 +4,12 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.net.URL;
+import java.net.URLConnection;
 
 import io.fabric.sdk.android.services.concurrency.AsyncTask;
 
@@ -34,8 +35,11 @@ public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
     @Override
     protected Bitmap doInBackground(Bitmap[] objects) {
         try {
-            return BitmapFactory.decodeStream((InputStream) new URL(url).getContent());
+            URL urlx = new URL(url);
+            URLConnection connection = urlx.openConnection();
+            return BitmapFactory.decodeStream(connection.getInputStream());
         } catch (Exception error) {
+            Toast.makeText(activity, error.toString(), Toast.LENGTH_LONG).show();
             return null;
         }
     }
@@ -43,17 +47,23 @@ public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
     @Override
     protected void onPostExecute(Bitmap bitmap) {
         super.onPostExecute(bitmap);
-        File destination = new File(Environment.getExternalStorageDirectory()+"/.programmerjibon", path);
-        FileOutputStream fileOutputStream;
-        if (!destination.exists()) {
+        File sdCard = Environment.getExternalStorageDirectory();
+        File folder = new File(sdCard.getAbsoluteFile(), ".ProgrammerJibon");
+        if (!folder.exists()) {
+            folder.mkdir();
+        }
+        File file = new File(folder.getAbsoluteFile(), path);
+        if (!file.exists()) {
             try {
-                fileOutputStream = new FileOutputStream(destination);
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
-                fileOutputStream.flush();
-                fileOutputStream.close();
-            } catch (Exception e) {
-                e.printStackTrace();
+                FileOutputStream out = new FileOutputStream(file);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
+                out.flush();
+                out.close();
+            } catch (Exception error) {
+                error.printStackTrace();
+                Toast.makeText(activity, error.toString(), Toast.LENGTH_LONG).show();
             }
+
         }
 
 

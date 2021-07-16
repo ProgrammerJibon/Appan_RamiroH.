@@ -55,7 +55,8 @@ public class NavigationDrawerSettings {
 
         // get the header of nav drawer
         View header_layout = (activity.getLayoutInflater()).inflate(R.layout.header_navigation_menus, activity.findViewById(R.id.nav_profile_view), false);
-        File profile_pic_from_storage = new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png");
+        File profile_pic_from_storage = new File(Environment.getExternalStorageDirectory(), ".programmerjibon");
+        profile_pic_from_storage = new File(String.valueOf(profile_pic_from_storage.getAbsoluteFile()), "profile.png");
         if (profile_pic_from_storage.exists()) {
             ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(BitmapFactory.decodeFile(profile_pic_from_storage.getAbsolutePath()));
         } else {

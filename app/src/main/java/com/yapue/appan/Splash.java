@@ -64,11 +64,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         SharedPrefrence preference = SharedPrefrence.getInstance(this);
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
-        try {
-            new SaveImage(this, loginDTO.getProfile_pic(), "profile.png");
-        } catch (Exception error) {
-            Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
-        }
+        new SaveImage(this, loginDTO.getProfile_pic(), "profile.png");
         openBaseActivity();
         userDetails = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         Log.e("tokensss", userDetails.getString(Consts.TOKAN, ""));
@@ -93,6 +89,15 @@ public class Splash extends AppCompatActivity {
             SharedPrefrence preference = SharedPrefrence.getInstance(this);
             loginDTO = preference.getParentUser(Consts.LOGINDTO);
             if (loginDTO.getId().contains(Consts.GUEST_ID)) {
+                (new Timer()).schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(getApplicationContext(), BaseActivity.class));
+                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                        finish();
+                    }
+                }, 3000);
+            } else if (loginDTO.getId().contains(Consts.USER_ID)) {
                 (new Timer()).schedule(new TimerTask() {
                     @Override
                     public void run() {
