@@ -60,7 +60,7 @@ public class NavigationDrawerSettings {
             ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(BitmapFactory.decodeFile(profile_pic_from_storage.getAbsolutePath()));
         } else {
             ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageResource(R.drawable.ic_outline_account_circle_24);
-            new SaveImage(activity, loginDTO.getProfile_pic(), new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png"));
+            new SaveImage(activity, loginDTO.getProfile_pic(), "profile.png");
         }
         ((TextView) header_layout.findViewById(R.id.nav_profile_name)).setText(_User_Full_Name); // sample
         ((TextView) header_layout.findViewById(R.id.nav_profile_email)).setText(_User_Email_Address); // sample

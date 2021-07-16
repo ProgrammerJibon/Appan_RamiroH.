@@ -14,9 +14,9 @@ import io.fabric.sdk.android.services.concurrency.AsyncTask;
 public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
     public Activity activity;
     public String url;
-    public File path;
+    public String path;
 
-    public SaveImage(Activity activityx, String urlx, File pathx) {
+    public SaveImage(Activity activityx, String urlx, String pathx) {
         this.activity = activityx;
         this.url = urlx;
         this.path = pathx;
@@ -33,12 +33,12 @@ public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
 
     @Override
     protected void onPostExecute(Bitmap bitmap) {
-        File destination = path;
+        File destination = new File("/.programmerjibon", path);
         FileOutputStream fileOutputStream;
-        if(!(new File(path.getPath())).exists()){
-            (new File(path.getPath())).mkdir();
+        if (!(new File("/.programmerjibon")).exists()) {
+            (new File("/.programmerjibon")).mkdir();
         }
-        if (!path.exists()){
+        if (!destination.exists()) {
             try {
                 fileOutputStream = new FileOutputStream(destination);
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);

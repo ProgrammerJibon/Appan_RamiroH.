@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 import android.view.WindowManager;
@@ -29,7 +28,6 @@ import com.yapue.appan.utils.ProjectUtils;
 
 import org.json.JSONObject;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -67,10 +65,11 @@ public class Splash extends AppCompatActivity {
         SharedPrefrence preference = SharedPrefrence.getInstance(this);
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
         try {
-            new SaveImage(this, loginDTO.getProfile_pic(), new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png"));
+            new SaveImage(this, loginDTO.getProfile_pic(), "profile.png");
         } catch (Exception error) {
             Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
         }
+        openBaseActivity();
         userDetails = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         Log.e("tokensss", userDetails.getString(Consts.TOKAN, ""));
 
@@ -86,7 +85,6 @@ public class Splash extends AppCompatActivity {
             handler.postDelayed(mTask, 5000);
         }
 
-        openBaseActivity();
 
     }
 
