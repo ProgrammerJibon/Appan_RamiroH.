@@ -3,6 +3,8 @@ package com.yapue.appan.activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,7 +36,6 @@ import com.yapue.appan.fragment.duties.DutiesFragment;
 import com.yapue.appan.fragment.foodDelivery.Catagory;
 import com.yapue.appan.fragment.wall.WallFragment;
 import com.yapue.appan.https.HttpsRequest;
-import com.yapue.appan.interfaces.Helper;
 import com.yapue.appan.models.AppVersion;
 import com.yapue.appan.models.DeviceInfo;
 import com.yapue.appan.models.LoginDTO;
@@ -45,8 +46,7 @@ import com.yapue.appan.utils.Consts;
 import com.yapue.appan.utils.GPSTracker;
 import com.yapue.appan.utils.ProjectUtils;
 
-import org.json.JSONObject;
-
+import java.net.URL;
 import java.util.HashMap;
 
 public class BaseActivity extends AppCompatActivity {
@@ -85,13 +85,29 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ProjectUtils.setStatusBarGradiant(BaseActivity.this);
         setContentView(R.layout.activity_base);
-        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base);
         preference = SharedPrefrence.getInstance(this);
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
+        Bitmap bitmap = null;
+        try {
+            URL url = new URL(loginDTO.getProfile_pic());
+            bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+        } catch (Exception error) {
+            Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
+        }
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base, bitmap);
         mContext = BaseActivity.this;
         fm = getSupportFragmentManager();
         gps = new GPSTracker(mContext);
-
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            if (bundle.getString("more_menu").equals(1)) {
+                Fragment fragment = moreFragment;
+                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+                fragmentTransaction.replace(R.id.frame, fragment, TAG_MORE);
+                fragmentTransaction.commitAllowingStateLoss();
+            }
+        }
         if (gps.canGetLocation()) {
             latitude = gps.getLatitude();
             longitude = gps.getLongitude();
