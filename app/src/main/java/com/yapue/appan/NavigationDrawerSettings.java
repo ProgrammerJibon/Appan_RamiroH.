@@ -1,6 +1,5 @@
 package com.yapue.appan;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -25,7 +24,6 @@ import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 
-@SuppressLint("Registered")
 public class NavigationDrawerSettings {
     public Activity activity;
     private LoginDTO loginDTO;
@@ -103,6 +101,12 @@ public class NavigationDrawerSettings {
                 if (loggedIn(activity)) {
                     new_activity(activity, NotificationActivity.class);
                 }
+            } else if (item.getItemId() == R.id.nav_categories) {
+                // categories intent opener
+            } else if (item.getItemId() == R.id.nav_shops) {
+                new_activity(activity, ShopActivity.class);
+            } else if (item.getItemId() == R.id.nav_ui_mode) {
+                // nav ui mode between dark and light theme
             } else if (item.getItemId() == R.id.nav_settings) {
                 Intent intentBrush = new Intent(activity, BaseActivity.class);
                 intentBrush.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
@@ -111,16 +115,8 @@ public class NavigationDrawerSettings {
                 intentBrush.putExtra("more_menu", 1);
                 activity.startActivity(intentBrush);
                 return true;
-            } else if (item.getItemId() == R.id.nav_shops) {
-                new_activity(activity, ShopActivity.class);
             } else if (item.getItemId() == R.id.about_us) {
                 new_activity(activity, AboutUsActivity.class);
-            } else if (item.getItemId() == R.id.about_us) {
-                // share ur app
-            } else if (item.getItemId() == R.id.nav_ui_mode) {
-                // nav ui mode
-            } else if (item.getItemId() == R.id.nav_categories) {
-                // categories intent opener
             } else if (item.getItemId() == R.id.nav_login) {
                 loggedIn(activity);
             } else {

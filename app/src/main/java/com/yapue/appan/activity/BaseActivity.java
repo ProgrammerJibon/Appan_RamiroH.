@@ -3,7 +3,6 @@ package com.yapue.appan.activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
@@ -87,20 +86,17 @@ public class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_base);
         preference = SharedPrefrence.getInstance(this);
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
-        Bitmap bitmap = null;
         try {
-            URL url = new URL(loginDTO.getProfile_pic());
-            bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-        } catch (Exception error) {
-            Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
+            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
         }
-        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base, bitmap);
         mContext = BaseActivity.this;
         fm = getSupportFragmentManager();
         gps = new GPSTracker(mContext);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            if (bundle.getString("more_menu").equals(1)) {
+            if (bundle.getString("more_menu").equals("1")) {
                 Fragment fragment = moreFragment;
                 FragmentTransaction fragmentTransaction = fm.beginTransaction();
                 fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
@@ -167,12 +163,6 @@ public class BaseActivity extends AppCompatActivity {
                 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 finish();
             }
-        }
-
-        try {
-            checkCurrentVersion();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 

@@ -70,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@+id/action_bar_menus"
-        android:background="@color/material_grey_300"></View>
+        android:background="@color/material_grey_300" />
 
 
     <LinearLayout
@@ -79,11 +79,17 @@
         android:layout_below="@+id/viewSeparator"
         android:gravity="center_horizontal">
 
-        <WebView
-            android:id="@+id/payment_us"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/webView1Refresher"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-             />
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/payment_us"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
     </LinearLayout>
 
     <ProgressBar

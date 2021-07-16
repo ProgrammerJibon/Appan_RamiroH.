@@ -1,17 +1,21 @@
 package com.yapue.appan.activity.chat;
 
 import android.content.Context;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.yapue.appan.NavigationDrawerSettings;
 import com.yapue.appan.R;
 import com.yapue.appan.adapter.ChatListAdapter;
 import com.yapue.appan.https.HttpsRequest;
@@ -27,6 +31,7 @@ import com.yapue.appan.utils.ProjectUtils;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -52,14 +57,19 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         mContext = ChatActivity.this;
         prefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = prefrence.getParentUser(Consts.LOGINDTO);
+        try {
+            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_chat, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+        }
         setUiAction();
     }
 
     public void setUiAction() {
-        IVback = (ImageView) findViewById(R.id.IVback);
+        IVback = findViewById(R.id.IVback);
         IVback.setOnClickListener(this);
 
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
+        swipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
         tvNo = findViewById(R.id.tvNo);
         rvChatList = findViewById(R.id.rvChatList);
 
@@ -111,7 +121,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
                         chatList = new ArrayList<>();
                         Type getpetDTO = new TypeToken<List<ChatListDTO>>() {
                         }.getType();
-                        chatList = (ArrayList<ChatListDTO>) new Gson().fromJson(response.getJSONArray("data").toString(), getpetDTO);
+                        chatList = new Gson().fromJson(response.getJSONArray("data").toString(), getpetDTO);
                         showData();
 
                     } catch (Exception e) {

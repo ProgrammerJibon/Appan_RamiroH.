@@ -1,6 +1,7 @@
 package com.yapue.appan;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 
+import java.net.URL;
 import java.util.ArrayList;
 
 public class DonateActivity extends AppCompatActivity {
@@ -25,6 +27,11 @@ public class DonateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_donate);
         SharedPrefrence preference = SharedPrefrence.getInstance(getApplicationContext());
         LoginDTO loginDTO = preference.getParentUser(Consts.LOGINDTO);
+        try {
+            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_donate, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+        }
         ListView listView = findViewById(R.id.idOfTakas);
         EditText editText = findViewById(R.id.taka);
         TextView button = findViewById(R.id.donate);
@@ -35,7 +42,7 @@ public class DonateActivity extends AppCompatActivity {
                     intentBrush.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
                     intentBrush.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     intentBrush.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    String orderId = String.valueOf((long) Math.floor(Math.random() * 9000000000L));
+                    String orderId = String.valueOf(Math.floor(Math.random() * 90000000));
                     intentBrush.putExtra("donateURL", "http://phpstack-132936-652468.cloudwaysapps.com/Stripe/BookingPayement/make_payment?user_id=" + loginDTO.getId() +
                             "&order_id=" + orderId + "&user_name=" + loginDTO.getFirst_name() + "&amount=" + editText.getText());
                     intentBrush.putExtra("donateID", orderId);

@@ -18,6 +18,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.yapue.appan.R;
 import com.yapue.appan.models.LoginDTO;
@@ -44,6 +45,7 @@ public class PaymentViewActivity extends AppCompatActivity {
         ProjectUtils.setStatusBarGradiant(PaymentViewActivity.this);
         setContentView(R.layout.activity_payment_view);
         progressBar = findViewById(R.id.progressBar);
+        SwipeRefreshLayout swipeRefreshLayout = findViewById(R.id.webView1Refresher);
         mContext = PaymentViewActivity.this;
 
         prefrence = SharedPrefrence.getInstance(mContext);
@@ -70,10 +72,18 @@ public class PaymentViewActivity extends AppCompatActivity {
                 public void onProgressChanged(WebView view, int newProgress) {
                     if (newProgress >= 100) {
                         progressBar.setProgress(0);
+                        swipeRefreshLayout.setRefreshing(false);
                     } else {
                         progressBar.setProgress(newProgress);
                     }
                     super.onProgressChanged(view, newProgress);
+                }
+            });
+            swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    payment_us.loadUrl(url);
+                    swipeRefreshLayout.setRefreshing(true);
                 }
             });
         } catch (Exception error) {

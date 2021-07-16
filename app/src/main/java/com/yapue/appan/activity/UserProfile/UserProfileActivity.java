@@ -7,17 +7,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.location.Address;
 import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Environment;
-import android.provider.MediaStore;
-import androidx.core.content.FileProvider;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.cardview.widget.CardView;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -25,13 +21,21 @@ import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.FileProvider;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.cocosw.bottomsheet.BottomSheet;
 import com.google.gson.Gson;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.schibstedspain.leku.LocationPickerActivity;
 import com.yapue.appan.BuildConfig;
+import com.yapue.appan.NavigationDrawerSettings;
 import com.yapue.appan.R;
 import com.yapue.appan.activity.BaseActivity;
 import com.yapue.appan.https.HttpsRequest;
@@ -43,13 +47,13 @@ import com.yapue.appan.utils.CustomEditText;
 import com.yapue.appan.utils.ImageCompression;
 import com.yapue.appan.utils.MainFragment;
 import com.yapue.appan.utils.ProjectUtils;
-import com.schibstedspain.leku.LocationPickerActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -105,7 +109,11 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
         sharedPrefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = sharedPrefrence.getParentUser(Consts.LOGINDTO);
-
+        try {
+            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_profile, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+        }
         if (getIntent().hasExtra("FlagLogin")) {
             flag_login = getIntent().getIntExtra("FlagLogin", 0);
         }
