@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.webkit.SslErrorHandler;
@@ -13,16 +12,15 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.yapue.appan.R;
 import com.yapue.appan.models.LoginDTO;
-import com.yapue.appan.models.MakeOrderDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 import com.yapue.appan.utils.ProjectUtils;
-
-import java.util.HashMap;
 
 public class PaymentViewActivity extends AppCompatActivity {
     private LinearLayout llBackMC;
@@ -42,12 +40,21 @@ public class PaymentViewActivity extends AppCompatActivity {
 
         prefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = prefrence.getParentUser(Consts.LOGINDTO);
-        payment_us = (WebView) findViewById(R.id.payment_us);
-        url = getIntent().getStringExtra(Consts.PAYAMENT_URL);
-        orderID = getIntent().getStringExtra(Consts.ORDER_ID);
+        payment_us = findViewById(R.id.payment_us);
+        try {
+            url = getIntent().getStringExtra(Consts.PAYAMENT_URL);
+            orderID = getIntent().getStringExtra(Consts.ORDER_ID);
+        } catch (Exception error) {
+            Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
+        }
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            url = bundle.getString("donateURL");
+            orderID = bundle.getString("donateID");
+        }
 
 
-        llBackMC = (LinearLayout) findViewById(R.id.llBackMC);
+        llBackMC = findViewById(R.id.llBackMC);
 
         llBackMC.setOnClickListener(new View.OnClickListener() {
             @Override

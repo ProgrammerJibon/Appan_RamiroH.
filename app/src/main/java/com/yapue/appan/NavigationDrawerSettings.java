@@ -13,17 +13,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.yapue.appan.activity.AboutUsActivity;
 import com.yapue.appan.activity.BaseActivity;
-import com.yapue.appan.activity.PaymentViewActivity;
+import com.yapue.appan.activity.MyOrder.MyOrderActivity;
 import com.yapue.appan.activity.UserProfile.UserProfileActivity;
 import com.yapue.appan.activity.chat.ChatActivity;
+import com.yapue.appan.activity.event.ShowMyEventActivity;
+import com.yapue.appan.activity.notification.NotificationActivity;
 import com.yapue.appan.activity.register.LoginSignupactivity;
 import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 
 import java.net.URL;
-import java.util.ArrayList;
 
 @SuppressLint("Registered")
 public class NavigationDrawerSettings {
@@ -56,20 +58,16 @@ public class NavigationDrawerSettings {
         // get the header of nav drawer
         View header_layout = (activity.getLayoutInflater()).inflate(R.layout.header_navigation_menus, activity.findViewById(R.id.nav_profile_view), false);
         try {
-
             URL url = new URL(pic);
             Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-            ((TextView) header_layout.findViewById(R.id.nav_profile_name)).setText(_User_Full_Name); // sample
-            ((TextView) header_layout.findViewById(R.id.nav_profile_email)).setText(_User_Email_Address); // sample
             ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(bitmap); // sample
-            header_layout.setVisibility(View.VISIBLE);
-            navigationView.addHeaderView(header_layout);
         } catch (Exception e) {
             e.printStackTrace();
-            header_layout.setVisibility(View.GONE);
-            Toast.makeText(activity.getApplicationContext(), "Please check your internet connection", Toast.LENGTH_LONG).show();
-
+            Toast.makeText(activity.getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
         }
+        ((TextView) header_layout.findViewById(R.id.nav_profile_name)).setText(_User_Full_Name); // sample
+        ((TextView) header_layout.findViewById(R.id.nav_profile_email)).setText(_User_Email_Address); // sample
+        navigationView.addHeaderView(header_layout);
 
         // any item clicked of nav drawer
         navigationView.setNavigationItemSelectedListener(item -> {
@@ -97,27 +95,32 @@ public class NavigationDrawerSettings {
                 }
             } else if (item.getItemId() == R.id.nav_donate) {
                 if (loggedIn(activity)) {
-                    ArrayList<String> takaList = new ArrayList<>();
-                    for (int taka = 1; taka < 200; taka++) {
-                        takaList.add(String.valueOf(taka * 5));
-                    }
-                    CharSequence[] takaListX = takaList.toArray(new CharSequence[takaList.size()]);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(activity.getApplicationContext());
-                    builder.setTitle("How much you want to donate us?");
-                    builder.setItems(takaListX, (dialog, which) -> {
-                        Intent intentBrush = new Intent(activity, PaymentViewActivity.class);
-                        intentBrush.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
-                        intentBrush.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                        intentBrush.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        String orderId = String.valueOf((long) Math.floor(Math.random() * 9000000000L));
-                        intentBrush.putExtra(Consts.PAYAMENT_URL, "http://phpstack-132936-652468.cloudwaysapps.com/Stripe/BookingPayement/make_payment?user_id=" + loginDTO.getId() +
-                                "&order_id=" + orderId + "&user_name=" + loginDTO.getFirst_name() + "&amount=" + takaListX[which]);
-                        intentBrush.putExtra(Consts.ORDER_ID, orderId);
-                        activity.startActivity(intentBrush);
-                    });
-                    builder.create().show();
-
+                    new_activity(activity, DonateActivity.class);
                 }
+            } else if (item.getItemId() == R.id.nav_myOrders) {
+                if (loggedIn(activity)) {
+                    new_activity(activity, MyOrderActivity.class);
+                }
+            } else if (item.getItemId() == R.id.nav_event) {
+                if (loggedIn(activity)) {
+                    new_activity(activity, ShowMyEventActivity.class);
+                }
+            } else if (item.getItemId() == R.id.nav_notification) {
+                if (loggedIn(activity)) {
+                    new_activity(activity, NotificationActivity.class);
+                }
+            } else if (item.getItemId() == R.id.nav_settings) {
+                // wishlist opener
+            } else if (item.getItemId() == R.id.nav_myWishList) {
+                // wishlist opener
+            } else if (item.getItemId() == R.id.about_us) {
+                new_activity(activity, AboutUsActivity.class);
+            } else if (item.getItemId() == R.id.about_us) {
+                // share ur app
+            } else if (item.getItemId() == R.id.nav_myWishList) {
+                // nav ui mode
+            } else if (item.getItemId() == R.id.nav_categories) {
+                // categories intent opener
             } else if (item.getItemId() == R.id.nav_login) {
                 loggedIn(activity);
             } else {

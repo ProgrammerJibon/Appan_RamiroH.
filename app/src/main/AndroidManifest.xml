@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.yapue.appan">
-   <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/> -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -33,25 +33,32 @@
         android:required="false" />
 
     <application
-        android:name="com.yapue.appan.SysApplication"
+        android:name=".SysApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:replace="allowBackup"
-        android:requestLegacyExternalStorage="true">
+        tools:replace="allowBackup">
+        <activity android:name=".DonateActivity"></activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3753429604221199~4573525785"/>
-        <activity android:name="com.yapue.appan.activity.food.PromoCodeActivity"
-            android:launchMode="singleTop"></activity>
-        <activity android:name="com.yapue.appan.activity.home.BreedInfoHome"
-            android:launchMode="singleTop"/>
-        <activity android:name="com.yapue.appan.activity.petlist.PetListr"
-            android:launchMode="singleTop"/>
+            android:value="ca-app-pub-3753429604221199~4573525785" />
+
+        <activity
+            android:name=".activity.food.PromoCodeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.home.BreedInfoHome"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.petlist.PetListr"
+            android:launchMode="singleTop" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -74,7 +81,7 @@
             android:value="@string/google_maps_key" />
         -->
         <activity
-            android:name="com.yapue.appan.Splash"
+            android:name=".Splash"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,198 +90,198 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.yapue.appan.activity.register.LoginActivity"
+            android:name=".activity.register.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.register.OTPActivity"
+            android:name=".activity.register.OTPActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.BaseActivity"
+            android:name=".activity.BaseActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.UserProfile.UserProfileActivity"
+            android:name=".activity.UserProfile.UserProfileActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.WebViewActivity"
+            android:name=".activity.WebViewActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.AboutUsActivity"
+            android:name=".activity.AboutUsActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.utils.MainFragment"
+            android:name=".utils.MainFragment"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.editPet.EditPet"
+            android:name=".activity.editPet.EditPet"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.SubCategoryList"
+            android:name=".activity.food.SubCategoryList"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.petprofile.ProfilePets"
+            android:name=".activity.petprofile.ProfilePets"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.addpet.AddPetSlides"
+            android:name=".activity.addpet.AddPetSlides"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.SearchActivity"
+            android:name=".activity.food.SearchActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.nearbypetlist.FriendPetProfile"
+            android:name=".activity.nearbypetlist.FriendPetProfile"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.nearbypetlist.PetProfileNearByUser"
+            android:name=".activity.nearbypetlist.PetProfileNearByUser"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.duties.AddReminder"
+            android:name=".activity.duties.AddReminder"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.duties.HistoryReminder"
+            android:name=".activity.duties.HistoryReminder"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.duties.ConfirmReminder"
+            android:name=".activity.duties.ConfirmReminder"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.duties.CreateReminder"
+            android:name=".activity.duties.CreateReminder"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.register.LoginSignupactivity"
+            android:name=".activity.register.LoginSignupactivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.register.ForgotpasswordActivity"
+            android:name=".activity.register.ForgotpasswordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.register.ChangePasswordActivity"
+            android:name=".activity.register.ChangePasswordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.duties.EditReminder"
+            android:name=".activity.duties.EditReminder"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.FoodList"
+            android:name=".activity.food.FoodList"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.ProductByHomeList"
+            android:name=".activity.food.ProductByHomeList"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.BrandList"
+            android:name=".activity.food.BrandList"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.ShopifyFoodList"
+            android:name=".activity.food.ShopifyFoodList"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.ShopifyFoodDetail"
+            android:name=".activity.food.ShopifyFoodDetail"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.chat.ChatNotificationActivity"
+            android:name=".activity.chat.ChatNotificationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.FoodDetail"
+            android:name=".activity.food.FoodDetail"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.Cart"
+            android:name=".activity.food.Cart"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="com.yapue.appan.activity.Memories.SpacePhotoActivity" />
+        <activity android:name=".activity.Memories.SpacePhotoActivity" />
         <activity
-            android:name="com.yapue.appan.activity.food.ViewOrderDetails"
+            android:name=".activity.food.ViewOrderDetails"
             android:launchMode="singleTop"
             android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert" />
         <activity
-            android:name="com.yapue.appan.activity.AddMemories"
+            android:name=".activity.AddMemories"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.MyOrder.MyOrderActivity"
+            android:name=".activity.MyOrder.MyOrderActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.MyOrder.vieworder.ViewOrderActivity"
+            android:name=".activity.MyOrder.vieworder.ViewOrderActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.vat.PlaceDetailsActivity"
+            android:name=".activity.vat.PlaceDetailsActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.ContactActivity"
+            android:name=".activity.ContactActivity"
+            android:launchMode="singleTop"
             android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:launchMode="singleTop"/>
-        <activity
-            android:name="com.yapue.appan.activity.filter.FilterActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.yapue.appan.activity.filter.SearchActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTop"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.wall.Comment"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTop"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name="com.yapue.appan.activity.petprofile.RatingPet"
+            android:name=".activity.filter.FilterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.wall.PetVoteActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.yapue.appan.activity.wall.EditPost"
+            android:name=".activity.filter.SearchActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.wall.ViewPost"
+            android:name=".activity.wall.Comment"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.petprofile.RatingPet"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.wall.PostWall"
+            android:name=".activity.wall.PetVoteActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.wall.MyPost"
+            android:name=".activity.wall.EditPost"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.wall.ViewPost"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.Memories.GalleryActivity"
+            android:name=".activity.wall.PostWall"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.MyOrder.ShopifyMyOrderDetail"
+            android:name=".activity.wall.MyPost"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.PaymentViewActivity"
+            android:name=".activity.Memories.GalleryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyOrder.ShopifyMyOrderDetail"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PaymentViewActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
@@ -282,23 +289,22 @@
             android:name="io.fabric.ApiKey"
             android:value="6956ee260d8a46359094304995f81a6c154130cd" />
 
-        <activity android:name="com.yapue.appan.AppIntro" />
+        <activity android:name=".AppIntro" />
         <activity
-            android:name="com.yapue.appan.activity.food.WriteReview"
+            android:name=".activity.food.WriteReview"
             android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.multipleimagepicker.MultiImageSelectorActivity"
+            android:name=".multipleimagepicker.MultiImageSelectorActivity"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name="com.yapue.appan.multipleimagepicker.MultiMyPetImageSelectorActivity"
+            android:name=".multipleimagepicker.MultiMyPetImageSelectorActivity"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name="com.yapue.appan.activity.Memories.AddMultipleImage"
+            android:name=".activity.Memories.AddMultipleImage"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
-        <activity android:name="com.yapue.appan.activity.tracker.TrackerActivity" /> <!-- [START firebase_service] -->
-
+        <activity android:name=".activity.tracker.TrackerActivity" /> <!-- [START firebase_service] -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_skylight_notification" />
@@ -306,152 +312,152 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/orange_accent" />
 
-        <service android:name="com.yapue.appan.MyFirebaseMessagingService">
+        <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service> <!-- [END firebase_service] -->
-        <receiver android:name="com.yapue.appan.utils.SmsReceiver">
+        <receiver android:name=".utils.SmsReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name="com.yapue.appan.activity.chat.ChatActivity"
+            android:name=".activity.chat.ChatActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.chat.OneTwoOneChatDemo"
+            android:name=".activity.chat.OneTwoOneChatDemo"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.notification.NotificationActivity"
+            android:name=".activity.notification.NotificationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.contactmessage.ContactMessageActivity"
+            android:name=".activity.contactmessage.ContactMessageActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.yapue.appan.activity.food.OrdershipedActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.food.OrdershipedActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.nearbypetlist.ContactPetListActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.nearbypetlist.ContactPetListActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.utils.ImageZoomActivity"
-            android:screenOrientation="portrait"
+            android:name=".utils.ImageZoomActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.event.EventCreate"
-            android:screenOrientation="portrait"
+            android:name=".activity.event.EventCreate"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.event.ShowMyEventActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.event.ShowMyEventActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.event.MyEventDescriptionActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.event.MyEventDescriptionActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.event.OtherEventDescriptionActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.event.OtherEventDescriptionActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.event.ShowJoinedEventUserActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.event.ShowJoinedEventUserActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petprofile.PetViewActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.petprofile.PetViewActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petmarket.CommentPetMarket"
-            android:screenOrientation="portrait"
+            android:name=".activity.petmarket.CommentPetMarket"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petprofile.UserPetProfileForWallActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.petprofile.UserPetProfileForWallActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petmarket.ShowPetMarketActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.petmarket.ShowPetMarketActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petmarket.AddPetMarketActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.petmarket.AddPetMarketActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petprofile.PetFolowersActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.petprofile.PetFolowersActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.utils.imagepager.ImageviewpagerActivity"
-            android:screenOrientation="portrait"
+            android:name=".utils.imagepager.ImageviewpagerActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.fragment.NearBy.ShopActivity"
-            android:screenOrientation="portrait"
+            android:name=".fragment.NearBy.ShopActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.fragment.NearBy.SalonActivity"
-            android:screenOrientation="portrait"
+            android:name=".fragment.NearBy.SalonActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.fragment.NearBy.TraninerActivity"
-            android:screenOrientation="portrait"
+            android:name=".fragment.NearBy.TraninerActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.fragment.NearBy.HostelActivity"
-            android:screenOrientation="portrait"
+            android:name=".fragment.NearBy.HostelActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.fragment.NearBy.VaterinaryActivity"
-            android:screenOrientation="portrait"
+            android:name=".fragment.NearBy.VaterinaryActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petmarket.ShowMyPetAdActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.petmarket.ShowMyPetAdActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.filter.FilterPetMarketActivity"
-            android:screenOrientation="portrait"
+            android:name=".activity.filter.FilterPetMarketActivity"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.yapue.appan.activity.petmarket.CatagoryPetMarket"
-            android:screenOrientation="portrait"
+            android:name=".activity.petmarket.CatagoryPetMarket"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.schibstedspain.leku.LocationPickerActivity"
             android:label="@string/leku_title_activity_location_picker"
-            android:parentActivityName="com.yapue.appan.activity.UserProfile.UserProfileActivity"
+            android:parentActivityName=".activity.UserProfile.UserProfileActivity"
             android:theme="@style/AppTheme.Map"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -470,10 +476,10 @@
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_pRpz9FLFnbcyXX" /> <!-- rzp_live_A65XrWACGxqepT -->
         <!-- rzp_test_pRpz9FLFnbcyXX -->
-        <activity android:name="com.yapue.appan.activity.food.AddressActivity" />
-        <activity android:name="com.yapue.appan.ui.AlarmLandingPageActivity" />
+        <activity android:name=".activity.food.AddressActivity" />
+        <activity android:name=".ui.AlarmLandingPageActivity" />
 
-        <receiver android:name="com.yapue.appan.service.AlarmReceiver" />
+        <receiver android:name=".service.AlarmReceiver" />
     </application>
 
 </manifest>

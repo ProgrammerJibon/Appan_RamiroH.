@@ -23,7 +23,7 @@ android {
         applicationId "com.yapue.appan"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 110090013
+        versionCode 110090015
         versionName 'Error.00x7E008'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         versionNameSuffix = 'ProgrammerJibon'
@@ -70,7 +70,7 @@ ext {
 
 repositories {
     mavenCentral()
-    maven { url "https://dl.bintray.com/hani-momanii/maven"}
+    maven { url "https://dl.bintray.com/hani-momanii/maven" }
 }
 
 
