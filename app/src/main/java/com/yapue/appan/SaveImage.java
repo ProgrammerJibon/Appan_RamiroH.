@@ -3,6 +3,7 @@ package com.yapue.appan;
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Environment;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,6 +24,14 @@ public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
     }
 
     @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        if (!(new File(Environment.getExternalStorageDirectory()+"/.programmerjibon")).exists()) {
+            (new File(Environment.getExternalStorageDirectory()+"/.programmerjibon")).mkdir();
+        }
+    }
+
+    @Override
     protected Bitmap doInBackground(Bitmap[] objects) {
         try {
             return BitmapFactory.decodeStream((InputStream) new URL(url).getContent());
@@ -33,11 +42,9 @@ public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
 
     @Override
     protected void onPostExecute(Bitmap bitmap) {
-        File destination = new File("/.programmerjibon", path);
+        super.onPostExecute(bitmap);
+        File destination = new File(Environment.getExternalStorageDirectory()+"/.programmerjibon", path);
         FileOutputStream fileOutputStream;
-        if (!(new File("/.programmerjibon")).exists()) {
-            (new File("/.programmerjibon")).mkdir();
-        }
         if (!destination.exists()) {
             try {
                 fileOutputStream = new FileOutputStream(destination);

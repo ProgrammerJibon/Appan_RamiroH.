@@ -90,6 +90,8 @@ public class Splash extends AppCompatActivity {
 
     public void openBaseActivity() {
         try {
+            SharedPrefrence preference = SharedPrefrence.getInstance(this);
+            loginDTO = preference.getParentUser(Consts.LOGINDTO);
             if (loginDTO.getId().contains(Consts.GUEST_ID)) {
                 (new Timer()).schedule(new TimerTask() {
                     @Override
