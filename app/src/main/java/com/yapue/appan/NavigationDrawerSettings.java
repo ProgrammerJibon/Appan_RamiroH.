@@ -3,7 +3,8 @@ package com.yapue.appan;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Environment;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,10 +25,11 @@ import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 
+import java.io.File;
+
 public class NavigationDrawerSettings {
     public Activity activity;
-    private LoginDTO loginDTO;
-    private Bitmap bitmap_profile_pic;
+    public LoginDTO loginDTO;
 
     public NavigationDrawerSettings(Activity parentActivityIntent, int nav_drawer) {
         this.activity = parentActivityIntent;
@@ -53,7 +55,13 @@ public class NavigationDrawerSettings {
 
         // get the header of nav drawer
         View header_layout = (activity.getLayoutInflater()).inflate(R.layout.header_navigation_menus, activity.findViewById(R.id.nav_profile_view), false);
-        ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(bitmap_profile_pic);
+        File profile_pic_from_storage = new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png");
+        if (profile_pic_from_storage.exists()) {
+            ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(BitmapFactory.decodeFile(profile_pic_from_storage.getAbsolutePath()));
+        } else {
+            ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageResource(R.drawable.ic_outline_account_circle_24);
+            new SaveImage(activity, loginDTO.getProfile_pic(), new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png"));
+        }
         ((TextView) header_layout.findViewById(R.id.nav_profile_name)).setText(_User_Full_Name); // sample
         ((TextView) header_layout.findViewById(R.id.nav_profile_email)).setText(_User_Email_Address); // sample
         navigationView.addHeaderView(header_layout);

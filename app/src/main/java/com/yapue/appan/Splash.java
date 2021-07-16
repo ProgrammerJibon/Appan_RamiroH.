@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -32,9 +30,6 @@ import com.yapue.appan.utils.ProjectUtils;
 import org.json.JSONObject;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -69,20 +64,7 @@ public class Splash extends AppCompatActivity {
         ProjectUtils.setStatusBarGradiant(Splash.this);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-        try {
-            SharedPrefrence preference = SharedPrefrence.getInstance(getApplicationContext());
-            loginDTO = preference.getParentUser(Consts.LOGINDTO);
-            Bitmap bitmap = BitmapFactory.decodeStream((InputStream) new URL(loginDTO.getProfile_pic()).getContent());
-            File destination = new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png");
-            FileOutputStream fileOutputStream = new FileOutputStream(destination);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
-            fileOutputStream.flush();
-            fileOutputStream.close();
-            openBaseActivity();
-        } catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-            finish();
-        }
+        new SaveImage(this, loginDTO.getProfile_pic(), new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png"));
         userDetails = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         Log.e("tokensss", userDetails.getString(Consts.TOKAN, ""));
 
@@ -98,6 +80,7 @@ public class Splash extends AppCompatActivity {
             handler.postDelayed(mTask, 5000);
         }
 
+        openBaseActivity();
 
     }
 
@@ -254,7 +237,6 @@ public class Splash extends AppCompatActivity {
                         share.setBooleanValue(SharedPrefrence.IS_LOGIN, true);
                         share.setValue(SharedPrefrence.USER_EMAIL, share.getValue(SharedPrefrence.USER_EMAIL));
                         share.setValue(SharedPrefrence.PASSWORD,  share.getValue(SharedPrefrence.PASSWORD));
-                        openBaseActivity();
 
                     } catch (Exception e) {
                         e.printStackTrace();
