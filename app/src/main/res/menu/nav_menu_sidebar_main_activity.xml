@@ -41,9 +41,9 @@
                     android:icon="@drawable/ic_outline_category_24"
                     android:title="Categories" />
                 <item
-                    android:id="@+id/nav_myWishList"
-                    android:icon="@drawable/ic_baseline_playlist_add_check_24"
-                    android:title="My WishList" />
+                    android:id="@+id/nav_shops"
+                    android:icon="@drawable/ic_location_on_black_24dp"
+                    android:title="Shops" />
                 <item
                     android:id="@+id/nav_ui_mode"
                     android:icon="@drawable/ic_baseline_nights_stay_24"

@@ -21,6 +21,7 @@ import com.yapue.appan.activity.chat.ChatActivity;
 import com.yapue.appan.activity.event.ShowMyEventActivity;
 import com.yapue.appan.activity.notification.NotificationActivity;
 import com.yapue.appan.activity.register.LoginSignupactivity;
+import com.yapue.appan.fragment.NearBy.ShopActivity;
 import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
@@ -60,7 +61,10 @@ public class NavigationDrawerSettings {
         try {
             URL url = new URL(pic);
             Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-            ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(bitmap); // sample
+            ((ImageView) navigationView.getHeaderView(0).findViewById(R.id.nav_profile_pic)).setImageBitmap(bitmap); // sample
+            navigationView.getHeaderView(0).setOnClickListener(view->{
+                new_activity(activity, UserProfileActivity.class);
+            });
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(activity.getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
@@ -111,13 +115,13 @@ public class NavigationDrawerSettings {
                 }
             } else if (item.getItemId() == R.id.nav_settings) {
                 // wishlist opener
-            } else if (item.getItemId() == R.id.nav_myWishList) {
-                // wishlist opener
+            } else if (item.getItemId() == R.id.nav_shops) {
+                new_activity(activity, ShopActivity.class);
             } else if (item.getItemId() == R.id.about_us) {
                 new_activity(activity, AboutUsActivity.class);
             } else if (item.getItemId() == R.id.about_us) {
                 // share ur app
-            } else if (item.getItemId() == R.id.nav_myWishList) {
+            } else if (item.getItemId() == R.id.nav_ui_mode) {
                 // nav ui mode
             } else if (item.getItemId() == R.id.nav_categories) {
                 // categories intent opener

@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -244,24 +245,21 @@ public class BaseActivity extends AppCompatActivity {
 
     public void checkCurrentVersion() {
 
-        new HttpsRequest(Consts.GET_CURRENT_VERSION, getParamsVersion(), this).stringPost(TAG, new Helper() {
-            @Override
-            public void backResponse(boolean flag, String msg, JSONObject response) {
+        new HttpsRequest(Consts.GET_CURRENT_VERSION, getParamsVersion(), this).stringPost(TAG, (flag, msg, response) -> {
 
-                ProjectUtils.pauseProgressDialog();
-                if (flag) {
-                    try {
-                        appVersion = new AppVersion();
-                        appVersion = new Gson().fromJson(response.getJSONObject("data").toString(), AppVersion.class);
-                        if (!appVersion.getVersion_name().equalsIgnoreCase(String.valueOf(versionName))) {
-                            versionAlert();
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
+            ProjectUtils.pauseProgressDialog();
+            if (flag) {
+                try {
+                    appVersion = new AppVersion();
+                    appVersion = new Gson().fromJson(response.getJSONObject("data").toString(), AppVersion.class);
+                    if (!appVersion.getVersion_name().equalsIgnoreCase(String.valueOf(versionName))) {
+                        versionAlert();
                     }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-
             }
+
         });
     }
 
@@ -293,7 +291,7 @@ public class BaseActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
-                        closeApp();
+                        Toast.makeText(getApplicationContext(), "Newer version contain more amazing features", Toast.LENGTH_LONG).show();
                     }
                 })
                 .show();

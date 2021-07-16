@@ -35,9 +35,9 @@ public class DonateActivity extends AppCompatActivity {
                 intentBrush.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                 intentBrush.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 String orderId = String.valueOf((long) Math.floor(Math.random() * 9000000000L));
-                intentBrush.putExtra(Consts.PAYAMENT_URL, "http://phpstack-132936-652468.cloudwaysapps.com/Stripe/BookingPayement/make_payment?user_id=" + loginDTO.getId() +
+                intentBrush.putExtra("donateURL", "http://phpstack-132936-652468.cloudwaysapps.com/Stripe/BookingPayement/make_payment?user_id=" + loginDTO.getId() +
                         "&order_id=" + orderId + "&user_name=" + loginDTO.getFirst_name() + "&amount=" + editText.getText());
-                intentBrush.putExtra(Consts.ORDER_ID, orderId);
+                intentBrush.putExtra("donateID", orderId);
                 startActivity(intentBrush);
             } else {
                 Toast.makeText(this, "Please select or enter a valid ammount", Toast.LENGTH_LONG).show();
@@ -50,7 +50,11 @@ public class DonateActivity extends AppCompatActivity {
         ArrayAdapter<Integer> integerArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, integerArrayList);
         listView.setAdapter(integerArrayAdapter);
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            editText.setText(integerArrayList.get(position));
+            try {
+                editText.setText(String.valueOf(integerArrayList.get(position)));
+            }catch (Exception error){
+                Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
+            }
         });
     }
 }

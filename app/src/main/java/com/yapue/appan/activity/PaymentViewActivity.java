@@ -49,8 +49,11 @@ public class PaymentViewActivity extends AppCompatActivity {
         }
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            url = bundle.getString("donateURL");
-            orderID = bundle.getString("donateID");
+            if (bundle.getString("donateURL").equals("") && bundle.getString("donateID").equals("")){
+                url = bundle.getString("donateURL");
+                orderID = bundle.getString("donateID");
+            }
+
         }
 
 
