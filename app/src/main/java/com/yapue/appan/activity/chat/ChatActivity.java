@@ -1,12 +1,10 @@
 package com.yapue.appan.activity.chat;
 
 import android.content.Context;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,7 +29,6 @@ import com.yapue.appan.utils.ProjectUtils;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -57,11 +54,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         mContext = ChatActivity.this;
         prefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = prefrence.getParentUser(Consts.LOGINDTO);
-        try {
-            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_chat, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
-        } catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_chat);
         setUiAction();
     }
 

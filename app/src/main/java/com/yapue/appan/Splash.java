@@ -5,8 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
 import android.view.WindowManager;
@@ -28,6 +31,10 @@ import com.yapue.appan.utils.ProjectUtils;
 
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -62,7 +69,20 @@ public class Splash extends AppCompatActivity {
         ProjectUtils.setStatusBarGradiant(Splash.this);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-
+        try {
+            SharedPrefrence preference = SharedPrefrence.getInstance(getApplicationContext());
+            loginDTO = preference.getParentUser(Consts.LOGINDTO);
+            Bitmap bitmap = BitmapFactory.decodeStream((InputStream) new URL(loginDTO.getProfile_pic()).getContent());
+            File destination = new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png");
+            FileOutputStream fileOutputStream = new FileOutputStream(destination);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
+            fileOutputStream.flush();
+            fileOutputStream.close();
+            openBaseActivity();
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+            finish();
+        }
         userDetails = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         Log.e("tokensss", userDetails.getString(Consts.TOKAN, ""));
 
@@ -78,9 +98,11 @@ public class Splash extends AppCompatActivity {
             handler.postDelayed(mTask, 5000);
         }
 
+
+    }
+
+    public void openBaseActivity() {
         try {
-            SharedPrefrence preference = SharedPrefrence.getInstance(getApplicationContext());
-            loginDTO = preference.getParentUser(Consts.LOGINDTO);
             if (loginDTO.getId().contains(Consts.GUEST_ID)) {
                 (new Timer()).schedule(new TimerTask() {
                     @Override
@@ -95,7 +117,6 @@ public class Splash extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
         }
     }
-
     Runnable mTask = new Runnable() {
         @Override
         public void run() {
@@ -233,10 +254,7 @@ public class Splash extends AppCompatActivity {
                         share.setBooleanValue(SharedPrefrence.IS_LOGIN, true);
                         share.setValue(SharedPrefrence.USER_EMAIL, share.getValue(SharedPrefrence.USER_EMAIL));
                         share.setValue(SharedPrefrence.PASSWORD,  share.getValue(SharedPrefrence.PASSWORD));
-                        Intent intent = new Intent(mContext, BaseActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
-                        finish();
+                        openBaseActivity();
 
                     } catch (Exception e) {
                         e.printStackTrace();

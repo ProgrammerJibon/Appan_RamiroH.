@@ -3,7 +3,6 @@ package com.yapue.appan.activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -45,7 +44,6 @@ import com.yapue.appan.utils.Consts;
 import com.yapue.appan.utils.GPSTracker;
 import com.yapue.appan.utils.ProjectUtils;
 
-import java.net.URL;
 import java.util.HashMap;
 
 public class BaseActivity extends AppCompatActivity {
@@ -86,11 +84,7 @@ public class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_base);
         preference = SharedPrefrence.getInstance(this);
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
-        try {
-            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
-        } catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base);
         mContext = BaseActivity.this;
         fm = getSupportFragmentManager();
         gps = new GPSTracker(mContext);

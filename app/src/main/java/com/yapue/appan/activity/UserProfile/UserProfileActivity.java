@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.location.Address;
 import android.location.Geocoder;
 import android.net.Uri;
@@ -21,7 +20,6 @@ import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -53,7 +51,6 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -109,11 +106,7 @@ public class UserProfileActivity extends AppCompatActivity implements View.OnCli
 
         sharedPrefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = sharedPrefrence.getParentUser(Consts.LOGINDTO);
-        try {
-            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_profile, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
-        } catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_profile);
         if (getIntent().hasExtra("FlagLogin")) {
             flag_login = getIntent().getIntExtra("FlagLogin", 0);
         }

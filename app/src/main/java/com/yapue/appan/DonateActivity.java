@@ -1,7 +1,6 @@
 package com.yapue.appan;
 
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -16,7 +15,6 @@ import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 
-import java.net.URL;
 import java.util.ArrayList;
 
 public class DonateActivity extends AppCompatActivity {
@@ -27,11 +25,7 @@ public class DonateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_donate);
         SharedPrefrence preference = SharedPrefrence.getInstance(getApplicationContext());
         LoginDTO loginDTO = preference.getParentUser(Consts.LOGINDTO);
-        try {
-            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_donate, (BitmapFactory.decodeStream((new URL(loginDTO.getProfile_pic())).openConnection().getInputStream())));
-        } catch (Exception e) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-        }
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_donate);
         ListView listView = findViewById(R.id.idOfTakas);
         EditText editText = findViewById(R.id.taka);
         TextView button = findViewById(R.id.donate);

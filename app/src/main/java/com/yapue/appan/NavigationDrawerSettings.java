@@ -29,9 +29,8 @@ public class NavigationDrawerSettings {
     private LoginDTO loginDTO;
     private Bitmap bitmap_profile_pic;
 
-    public NavigationDrawerSettings(Activity parentActivityIntent, int nav_drawer, Bitmap bitmap_pic) {
+    public NavigationDrawerSettings(Activity parentActivityIntent, int nav_drawer) {
         this.activity = parentActivityIntent;
-        this.bitmap_profile_pic = bitmap_pic;
         // get the user data
         SharedPrefrence preference = SharedPrefrence.getInstance(activity.getApplicationContext());
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
@@ -54,9 +53,7 @@ public class NavigationDrawerSettings {
 
         // get the header of nav drawer
         View header_layout = (activity.getLayoutInflater()).inflate(R.layout.header_navigation_menus, activity.findViewById(R.id.nav_profile_view), false);
-        if (bitmap_profile_pic != null) {
-            ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(bitmap_profile_pic);
-        }
+        ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(bitmap_profile_pic);
         ((TextView) header_layout.findViewById(R.id.nav_profile_name)).setText(_User_Full_Name); // sample
         ((TextView) header_layout.findViewById(R.id.nav_profile_email)).setText(_User_Email_Address); // sample
         navigationView.addHeaderView(header_layout);
