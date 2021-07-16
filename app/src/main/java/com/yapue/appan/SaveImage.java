@@ -35,14 +35,20 @@ public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
     protected void onPostExecute(Bitmap bitmap) {
         File destination = path;
         FileOutputStream fileOutputStream;
-        try {
-            fileOutputStream = new FileOutputStream(destination);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
-            fileOutputStream.flush();
-            fileOutputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(!(new File(path.getPath())).exists()){
+            (new File(path.getPath())).mkdir();
         }
+        if (!path.exists()){
+            try {
+                fileOutputStream = new FileOutputStream(destination);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
+                fileOutputStream.flush();
+                fileOutputStream.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
 
     }
 }

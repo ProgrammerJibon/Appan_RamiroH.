@@ -64,6 +64,8 @@ public class Splash extends AppCompatActivity {
         ProjectUtils.setStatusBarGradiant(Splash.this);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
+        SharedPrefrence preference = SharedPrefrence.getInstance(this);
+        loginDTO = preference.getParentUser(Consts.LOGINDTO);
         try {
             new SaveImage(this, loginDTO.getProfile_pic(), new File(Environment.getExternalStorageDirectory() + "/.programmerjibon/.saved", "profile.png"));
         } catch (Exception error) {
