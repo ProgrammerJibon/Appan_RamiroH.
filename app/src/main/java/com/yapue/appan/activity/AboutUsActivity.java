@@ -1,13 +1,15 @@
 package com.yapue.appan.activity;
 
 import android.content.Context;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.yapue.appan.NavigationDrawerSettings;
 import com.yapue.appan.R;
 import com.yapue.appan.utils.ProjectUtils;
 
@@ -21,14 +23,15 @@ public class AboutUsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ProjectUtils.setStatusBarGradiant(AboutUsActivity.this);
         setContentView(R.layout.activity_about_us);
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_about_us);
         initView();
     }
 
     public void initView() {
 
-        about_us = (WebView) findViewById(R.id.about_us);
+        about_us = findViewById(R.id.about_us);
 
-        llBackAboutUs = (LinearLayout) findViewById(R.id.llBackAboutUs);
+        llBackAboutUs = findViewById(R.id.llBackAboutUs);
 
         about_us.setWebViewClient(new MyBrowser());
         about_us.getSettings().setLoadsImagesAutomatically(true);

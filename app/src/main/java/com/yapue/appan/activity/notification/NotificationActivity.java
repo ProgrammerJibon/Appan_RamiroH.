@@ -1,17 +1,18 @@
 package com.yapue.appan.activity.notification;
 
 import android.content.Context;
-
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.yapue.appan.NavigationDrawerSettings;
 import com.yapue.appan.R;
 import com.yapue.appan.adapter.NotificationAdapter;
 import com.yapue.appan.https.HttpsRequest;
@@ -50,6 +51,7 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         super.onCreate(savedInstanceState);
         ProjectUtils.setStatusBarGradiant(NotificationActivity.this);
         setContentView(R.layout.activity_notification);
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_notification);
         mContext = NotificationActivity.this;
         sharedPrefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = sharedPrefrence.getParentUser(Consts.LOGINDTO);
@@ -95,7 +97,7 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
                         Type listType = new TypeToken<List<NotificationDTO>>() {
                         }.getType();
 
-                        notificationDTOlist = (ArrayList<NotificationDTO>) new Gson().fromJson(response.getJSONArray("data").toString(), listType);
+                        notificationDTOlist = new Gson().fromJson(response.getJSONArray("data").toString(), listType);
                         showData();
                         tvNo.setVisibility(View.GONE);
                     } catch (Exception e) {

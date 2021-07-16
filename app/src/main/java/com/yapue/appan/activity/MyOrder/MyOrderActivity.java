@@ -3,14 +3,15 @@ package com.yapue.appan.activity.MyOrder;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -21,6 +22,9 @@ import com.google.gson.reflect.TypeToken;
 import com.paytm.pgsdk.PaytmOrder;
 import com.paytm.pgsdk.PaytmPGService;
 import com.paytm.pgsdk.PaytmPaymentTransactionCallback;
+import com.razorpay.Checkout;
+import com.razorpay.PaymentResultListener;
+import com.yapue.appan.NavigationDrawerSettings;
 import com.yapue.appan.R;
 import com.yapue.appan.activity.MyOrder.adapter.OrderAdapter;
 import com.yapue.appan.activity.food.ViewOrderDetails;
@@ -34,8 +38,6 @@ import com.yapue.appan.network.NetworkManager;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 import com.yapue.appan.utils.ProjectUtils;
-import com.razorpay.Checkout;
-import com.razorpay.PaymentResultListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -67,6 +69,7 @@ public class MyOrderActivity extends AppCompatActivity implements PaymentResultL
         super.onCreate(savedInstanceState);
         ProjectUtils.setStatusBarGradiant(MyOrderActivity.this);
         setContentView(R.layout.activity_my_order);
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_my_order);
         mContext = MyOrderActivity.this;
         prefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = prefrence.getParentUser(Consts.LOGINDTO);
@@ -127,7 +130,7 @@ public class MyOrderActivity extends AppCompatActivity implements PaymentResultL
                     }.getType();
                     try {
                         myOrderDtoList = new ArrayList<>();
-                        myOrderDtoList = (ArrayList<MyOrderDto>) new Gson().fromJson(response.getJSONArray("data").toString(), listType);
+                        myOrderDtoList = new Gson().fromJson(response.getJSONArray("data").toString(), listType);
 
 
                         showDataList();
@@ -278,7 +281,7 @@ public class MyOrderActivity extends AppCompatActivity implements PaymentResultL
 
             @Override
             public void onErrorLoadingWebPage(int iniErrorCode, String inErrorMessage, String inFailingUrl) {
-                Log.d(TAG, "onErrorLoadingWebPage: " + String.valueOf(iniErrorCode));
+                Log.d(TAG, "onErrorLoadingWebPage: " + iniErrorCode);
                 Log.d(TAG, "onErrorLoadingWebPage: " + inErrorMessage);
                 Log.d(TAG, "onErrorLoadingWebPage: " + inFailingUrl);
             }

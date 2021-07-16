@@ -45,6 +45,7 @@ import com.yapue.appan.utils.GPSTracker;
 import com.yapue.appan.utils.ProjectUtils;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class BaseActivity extends AppCompatActivity {
     private static final String TAG = BaseActivity.class.getCanonicalName();
@@ -84,13 +85,17 @@ public class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_base);
         preference = SharedPrefrence.getInstance(this);
         loginDTO = preference.getParentUser(Consts.LOGINDTO);
-        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base);
+        try {
+            new NavigationDrawerSettings(this, R.id.nav_drawer_activity_base);
+        } catch (Exception error) {
+            Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
+        }
         mContext = BaseActivity.this;
         fm = getSupportFragmentManager();
         gps = new GPSTracker(mContext);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            if (bundle.getString("more_menu").equals("1")) {
+            if (Objects.equals(bundle.getString("more_menu"), "1")) {
                 Fragment fragment = moreFragment;
                 FragmentTransaction fragmentTransaction = fm.beginTransaction();
                 fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);

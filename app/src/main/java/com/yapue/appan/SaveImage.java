@@ -11,7 +11,7 @@ import java.net.URL;
 
 import io.fabric.sdk.android.services.concurrency.AsyncTask;
 
-public class SaveImage extends AsyncTask {
+public class SaveImage extends AsyncTask<Bitmap, Bitmap, Bitmap> {
     public Activity activity;
     public String url;
     public File path;
@@ -23,17 +23,26 @@ public class SaveImage extends AsyncTask {
     }
 
     @Override
-    protected Object doInBackground(Object[] objects) {
+    protected Bitmap doInBackground(Bitmap[] objects) {
         try {
-            Bitmap bitmap = BitmapFactory.decodeStream((InputStream) new URL(url).getContent());
-            File destination = path;
-            FileOutputStream fileOutputStream = new FileOutputStream(destination);
+            return BitmapFactory.decodeStream((InputStream) new URL(url).getContent());
+        } catch (Exception error) {
+            return null;
+        }
+    }
+
+    @Override
+    protected void onPostExecute(Bitmap bitmap) {
+        File destination = path;
+        FileOutputStream fileOutputStream;
+        try {
+            fileOutputStream = new FileOutputStream(destination);
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
             fileOutputStream.flush();
             fileOutputStream.close();
-        } catch (Exception error) {
-            return false;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return true;
+
     }
 }

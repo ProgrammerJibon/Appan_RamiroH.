@@ -2,15 +2,17 @@ package com.yapue.appan.activity.event;
 
 import android.content.Context;
 import android.content.Intent;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.yapue.appan.NavigationDrawerSettings;
 import com.yapue.appan.R;
 import com.yapue.appan.adapter.EventListAdapter;
 import com.yapue.appan.fragment.event.MyEventFragment;
@@ -50,6 +52,7 @@ public class ShowMyEventActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         ProjectUtils.setStatusBarGradiant(ShowMyEventActivity.this);
         setContentView(R.layout.activity_show_my_event);
+        new NavigationDrawerSettings(this, R.id.nav_drawer_activity_my_event);
         mContext = ShowMyEventActivity.this;
         sharedPrefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = sharedPrefrence.getParentUser(Consts.LOGINDTO);
