@@ -1,5 +1,6 @@
 package com.yapue.appan.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -8,10 +9,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.SslErrorHandler;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +25,8 @@ import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
 import com.yapue.appan.utils.ProjectUtils;
 
+import java.util.Objects;
+
 public class PaymentViewActivity extends AppCompatActivity {
     private LinearLayout llBackMC;
     private WebView payment_us;
@@ -30,12 +35,15 @@ public class PaymentViewActivity extends AppCompatActivity {
     private SharedPrefrence prefrence;
     private LoginDTO loginDTO;
     private String TAG = PaymentViewActivity.class.getSimpleName();
+    ProgressBar progressBar;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ProjectUtils.setStatusBarGradiant(PaymentViewActivity.this);
         setContentView(R.layout.activity_payment_view);
+        progressBar = findViewById(R.id.progressBar);
         mContext = PaymentViewActivity.this;
 
         prefrence = SharedPrefrence.getInstance(mContext);
@@ -44,16 +52,32 @@ public class PaymentViewActivity extends AppCompatActivity {
         try {
             url = getIntent().getStringExtra(Consts.PAYAMENT_URL);
             orderID = getIntent().getStringExtra(Consts.ORDER_ID);
+            Bundle bundle = getIntent().getExtras();
+            if (bundle != null) {
+                if (Objects.equals(bundle.getString("donateURL"), "") && Objects.equals(bundle.getString("donateID"), "")) {
+                    url = bundle.getString("donateURL");
+                    orderID = bundle.getString("donateID");
+                }
+
+            }
+            WebSettings settings = payment_us.getSettings();
+            settings.setJavaScriptEnabled(true);
+            settings.setDomStorageEnabled(true);
+            payment_us.loadUrl(url);
+            payment_us.setWebViewClient(new SSLTolerentWebViewClient());
+            payment_us.setWebChromeClient(new WebChromeClient() {
+                @Override
+                public void onProgressChanged(WebView view, int newProgress) {
+                    if (newProgress >= 100) {
+                        progressBar.setProgress(0);
+                    } else {
+                        progressBar.setProgress(newProgress);
+                    }
+                    super.onProgressChanged(view, newProgress);
+                }
+            });
         } catch (Exception error) {
             Toast.makeText(this, error.toString(), Toast.LENGTH_LONG).show();
-        }
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            if (bundle.getString("donateURL").equals("") && bundle.getString("donateID").equals("")){
-                url = bundle.getString("donateURL");
-                orderID = bundle.getString("donateID");
-            }
-
         }
 
 
@@ -68,11 +92,6 @@ public class PaymentViewActivity extends AppCompatActivity {
         });
 
 
-        WebSettings settings = payment_us.getSettings();
-        settings.setJavaScriptEnabled(true);
-        settings.setDomStorageEnabled(true);
-        payment_us.loadUrl(url);
-        payment_us.setWebViewClient(new SSLTolerentWebViewClient());
     }
 
 

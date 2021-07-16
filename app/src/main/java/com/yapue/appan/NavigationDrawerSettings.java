@@ -4,14 +4,14 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.material.navigation.NavigationView;
 import com.yapue.appan.activity.AboutUsActivity;
 import com.yapue.appan.activity.BaseActivity;
@@ -25,8 +25,6 @@ import com.yapue.appan.fragment.NearBy.ShopActivity;
 import com.yapue.appan.models.LoginDTO;
 import com.yapue.appan.sharedprefrence.SharedPrefrence;
 import com.yapue.appan.utils.Consts;
-
-import java.net.URL;
 
 @SuppressLint("Registered")
 public class NavigationDrawerSettings {
@@ -59,12 +57,12 @@ public class NavigationDrawerSettings {
         // get the header of nav drawer
         View header_layout = (activity.getLayoutInflater()).inflate(R.layout.header_navigation_menus, activity.findViewById(R.id.nav_profile_view), false);
         try {
-            URL url = new URL(pic);
-            Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
-            ((ImageView) navigationView.getHeaderView(0).findViewById(R.id.nav_profile_pic)).setImageBitmap(bitmap); // sample
-            navigationView.getHeaderView(0).setOnClickListener(view->{
-                new_activity(activity, UserProfileActivity.class);
-            });
+            Glide.with(activity)
+                    .load(pic)
+                    .placeholder(R.drawable.ears_icon)
+                    .dontAnimate()
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .into(((ImageView) navigationView.getHeaderView(0).findViewById(R.id.nav_profile_pic)));
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(activity.getApplicationContext(), e.toString(), Toast.LENGTH_LONG).show();
