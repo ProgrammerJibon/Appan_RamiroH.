@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">320324078035-jq8lhmb1ovt7rvl6l9efknelko5ra05c.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://petstand-8434b.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">320324078035</string>
+    <string name="google_api_key" translatable="false">AIzaSyD-0iCP_5ZtbrriaKncQo74g8URhTpJm0w</string>
+    <string name="google_app_id" translatable="false">1:320324078035:android:f11249fb9e672ab6</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD-0iCP_5ZtbrriaKncQo74g8URhTpJm0w</string>
+    <string name="google_storage_bucket" translatable="false">petstand-8434b.appspot.com</string>
+    <string name="project_id" translatable="false">petstand-8434b</string>
+</resources>

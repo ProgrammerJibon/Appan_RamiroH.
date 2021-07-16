@@ -23,9 +23,10 @@ android {
         applicationId "com.yapue.appan"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 11001011
+        versionCode 110090012
         versionName 'Error.00x7E008'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionNameSuffix = 'ProgrammerJibon'
     }
     dataBinding {
         enabled = true
