@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +18,7 @@ import androidx.core.app.ActivityCompat;
 import com.google.gson.Gson;
 import com.victor.loading.rotate.RotateLoading;
 import com.yapue.appan.activity.BaseActivity;
+import com.yapue.appan.activity.UserProfile.UserProfileActivity;
 import com.yapue.appan.https.HttpsRequest;
 import com.yapue.appan.interfaces.Helper;
 import com.yapue.appan.models.LoginDTO;
@@ -29,8 +29,6 @@ import com.yapue.appan.utils.ProjectUtils;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Splash extends AppCompatActivity {
     private Handler handler = new Handler();
@@ -56,61 +54,6 @@ public class Splash extends AppCompatActivity {
     private LoginDTO loginDTO;
     private SharedPreferences userDetails;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ProjectUtils.setStatusBarGradiant(Splash.this);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash);
-        SharedPrefrence preference = SharedPrefrence.getInstance(this);
-        loginDTO = preference.getParentUser(Consts.LOGINDTO);
-        new SaveImage(this, loginDTO.getProfile_pic(), "profile.png");
-        openBaseActivity();
-        userDetails = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        Log.e("tokensss", userDetails.getString(Consts.TOKAN, ""));
-
-        rotateLoading = findViewById(R.id.rotateloading);
-        share = SharedPrefrence.getInstance(this);
-        mContext = Splash.this;
-        rotateLoading.start();
-
-
-        if (!hasPermissions(this, permissions)) {
-            ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
-        } else {
-            handler.postDelayed(mTask, 5000);
-        }
-
-
-    }
-
-    public void openBaseActivity() {
-        try {
-            SharedPrefrence preference = SharedPrefrence.getInstance(this);
-            loginDTO = preference.getParentUser(Consts.LOGINDTO);
-            if (loginDTO.getId().contains(Consts.GUEST_ID)) {
-                (new Timer()).schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        startActivity(new Intent(getApplicationContext(), BaseActivity.class));
-                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-                        finish();
-                    }
-                }, 3000);
-            } else if (loginDTO.getId().contains(Consts.USER_ID)) {
-                (new Timer()).schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        startActivity(new Intent(getApplicationContext(), BaseActivity.class));
-                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-                        finish();
-                    }
-                }, 3000);
-            }
-        } catch (Exception error) {
-            Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
-        }
-    }
     Runnable mTask = new Runnable() {
         @Override
         public void run() {
@@ -119,29 +62,29 @@ public class Splash extends AppCompatActivity {
 
                 loginCall();
 
-//                if (!loginDTO.getId().contains(Consts.GUEST_ID)) {
-//                    if (!loginDTO.getAddress().equalsIgnoreCase("")) {
-//                        Intent intent = new Intent(mContext, BaseActivity.class);
-//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                        startActivity(intent);
-//                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-//                        finish();
-//                    } else {
-//                        Intent intent = new Intent(mContext, UserProfileActivity.class);
-//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                        intent.putExtra("FlagLogin", 1);
-//                        startActivity(intent);
-//                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-//                        finish();
-//                    }
-//                } else {
-//                    Intent intent = new Intent(mContext, BaseActivity.class);
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                    intent.putExtra("FlagLogin", 1);
-//                    startActivity(intent);
-//                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-//                    finish();
-//                }
+                if (!loginDTO.getId().contains(Consts.GUEST_ID)) {
+                    if (!loginDTO.getAddress().equalsIgnoreCase("")) {
+                        Intent intent = new Intent(mContext, BaseActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                        finish();
+                    } else {
+                        Intent intent = new Intent(mContext, UserProfileActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        intent.putExtra("FlagLogin", 1);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                        finish();
+                    }
+                } else {
+                    Intent intent = new Intent(mContext, BaseActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    intent.putExtra("FlagLogin", 1);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+                    finish();
+                }
 
             } else {
                 startActivity(new Intent(mContext, AppIntro.class));
@@ -151,6 +94,31 @@ public class Splash extends AppCompatActivity {
 
         }
     };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ProjectUtils.setStatusBarGradiant(Splash.this);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_splash);
+        (new SaveImage(this, ((SharedPrefrence.getInstance(this)).getParentUser(Consts.LOGINDTO)).getProfile_pic(), "profile.png")).execute();
+        userDetails = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        Log.e("tokensss", userDetails.getString(Consts.TOKAN, ""));
+
+        rotateLoading = findViewById(R.id.rotateloading);
+        share = SharedPrefrence.getInstance(this);
+        mContext = Splash.this;
+        rotateLoading.start();
+
+        if (!hasPermissions(this, permissions)) {
+            ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
+            handler.postDelayed(mTask, 5000);
+        } else {
+            handler.postDelayed(mTask, 5000);
+        }
+
+
+    }
 
     public static boolean hasPermissions(Context context, String... permissions) {
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {

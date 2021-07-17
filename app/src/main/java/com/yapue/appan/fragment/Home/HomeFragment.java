@@ -4,37 +4,35 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-
-import androidx.databinding.DataBindingUtil;
-
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.viewpager.widget.ViewPager;
+
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.yapue.appan.R;
 import com.yapue.appan.SysApplication;
 import com.yapue.appan.activity.BaseActivity;
 import com.yapue.appan.activity.food.Cart;
+import com.yapue.appan.activity.food.SearchActivity;
 import com.yapue.appan.activity.home.BreedInfoHome;
 import com.yapue.appan.adapter.AdapterBrand;
 import com.yapue.appan.adapter.AdapterNewProductsForAnim;
@@ -43,7 +41,6 @@ import com.yapue.appan.adapter.AdapterProductsForAnim;
 import com.yapue.appan.adapter.Adapter_animals;
 import com.yapue.appan.adapter.SlidingImage_Adapter;
 import com.yapue.appan.adapter.SlidingOffer_Adapter;
-import com.yapue.appan.activity.food.SearchActivity;
 import com.yapue.appan.databinding.HomeFragmentNewBinding;
 import com.yapue.appan.fragment.NearBy.HostelActivity;
 import com.yapue.appan.fragment.NearBy.SalonActivity;
@@ -127,7 +124,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         ///
 
-        mAdView = (AdView) binding.adView;
+        mAdView = binding.adView;
 //        mAdView.setAdSize(AdSize.BANNER);
 //        mAdView.setAdUnitId(getString(R.string.banner_home));
 
@@ -171,6 +168,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     private void listners() {
+        binding.openDrawer.setOnClickListener(v -> {
+            DrawerLayout drawerLayout = baseActivity.findViewById(R.id.MainActivity);
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawers();
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
         binding.llPetShop.setOnClickListener(this);
         binding.llVeterinarian.setOnClickListener(this);
         binding.llPetsGrooming.setOnClickListener(this);

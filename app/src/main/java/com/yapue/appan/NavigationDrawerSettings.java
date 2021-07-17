@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.google.android.material.navigation.NavigationView;
 import com.yapue.appan.activity.AboutUsActivity;
 import com.yapue.appan.activity.BaseActivity;
@@ -52,17 +54,25 @@ public class NavigationDrawerSettings {
         if (!loginDTO.getId().contains(Consts.GUEST_ID)) {
             (nav_menus.findItem(R.id.nav_login)).setVisible(false);
         }
+        navigationView.setBackgroundColor(activity.getResources().getColor(R.color.Mod));
 
         // get the header of nav drawer
         View header_layout = (activity.getLayoutInflater()).inflate(R.layout.header_navigation_menus, activity.findViewById(R.id.nav_profile_view), false);
-        File profile_pic_from_storage = new File(Environment.getExternalStorageDirectory(), ".programmerjibon");
+        File profile_pic_from_storage = new File(Environment.getExternalStorageDirectory(), ".ProgrammerJibon");
         profile_pic_from_storage = new File(String.valueOf(profile_pic_from_storage.getAbsoluteFile()), "profile.png");
-        if (profile_pic_from_storage.exists()) {
-            ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(BitmapFactory.decodeFile(profile_pic_from_storage.getAbsolutePath()));
+        if (loggedIn(activity)) {
+            if (profile_pic_from_storage.exists()) {
+                ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageBitmap(BitmapFactory.decodeFile(profile_pic_from_storage.getAbsolutePath()));
+            }
         } else {
             ((ImageView) header_layout.findViewById(R.id.nav_profile_pic)).setImageResource(R.drawable.ic_outline_account_circle_24);
-            new SaveImage(activity, loginDTO.getProfile_pic(), "profile.png");
+            header_layout.findViewById(R.id.nav_profile_pic).setBackgroundColor(activity.getResources().getColor(R.color.white));
         }
+        header_layout.findViewById(R.id.nav_profile_pic).setOnClickListener(v -> {
+            if (loggedIn(activity)) {
+                new_activity(activity, UserProfileActivity.class);
+            }
+        });
         ((TextView) header_layout.findViewById(R.id.nav_profile_name)).setText(_User_Full_Name); // sample
         ((TextView) header_layout.findViewById(R.id.nav_profile_email)).setText(_User_Email_Address); // sample
         navigationView.addHeaderView(header_layout);
@@ -111,24 +121,23 @@ public class NavigationDrawerSettings {
                 // categories intent opener
             } else if (item.getItemId() == R.id.nav_shops) {
                 new_activity(activity, ShopActivity.class);
-            } else if (item.getItemId() == R.id.nav_ui_mode) {
+            } /*else if (item.getItemId() == R.id.nav_share) {
+                new_activity(activity, ShopActivity.class);
+                // this need to hire again for adding as new feature
+            }else if (item.getItemId() == R.id.nav_ui_mode) {
                 // nav ui mode between dark and light theme
+                // this need to hire again for adding as new feature
             } else if (item.getItemId() == R.id.nav_settings) {
-                Intent intentBrush = new Intent(activity, BaseActivity.class);
-                intentBrush.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
-                intentBrush.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-                intentBrush.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                intentBrush.putExtra("more_menu", 1);
-                activity.startActivity(intentBrush);
-                return true;
-            } else if (item.getItemId() == R.id.about_us) {
+                // this need to hire again for adding as new feature
+            }*/ else if (item.getItemId() == R.id.nav_about) {
                 new_activity(activity, AboutUsActivity.class);
             } else if (item.getItemId() == R.id.nav_login) {
                 loggedIn(activity);
             } else {
                 Toast.makeText(activity.getApplicationContext(), "Please wait for next update", Toast.LENGTH_LONG).show();
             }
-            return false;
+            ((DrawerLayout) activity.findViewById(R.id.MainActivity)).closeDrawers();
+            return true;
         });
     }
 

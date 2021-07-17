@@ -44,17 +44,17 @@
                     android:id="@+id/nav_shops"
                     android:icon="@drawable/ic_location_on_black_24dp"
                     android:title="Shops" />
-                <item
+                <!--<item
                     android:id="@+id/nav_ui_mode"
                     android:icon="@drawable/ic_baseline_nights_stay_24"
                     android:title="Night Mode" />
                 <item
                     android:id="@+id/nav_settings"
                     android:icon="@drawable/ic_more_black_24dp"
-                    android:title="More" />
+                    android:title="More" />-->
                 <item
                     android:id="@+id/nav_login"
-                    android:icon="@drawable/ic_baseline_login_24"
+                    android:icon="@drawable/ic_lock_outline_black_24dp"
                     android:title="Login" />
             </menu>
         </item>

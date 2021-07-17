@@ -56,9 +56,11 @@ public class PaymentViewActivity extends AppCompatActivity {
             orderID = getIntent().getStringExtra(Consts.ORDER_ID);
             Bundle bundle = getIntent().getExtras();
             if (bundle != null) {
-                if (Objects.equals(bundle.getString("donateURL"), "") && Objects.equals(bundle.getString("donateID"), "")) {
+                if (!Objects.equals(bundle.getString("donateURL"), "") && !Objects.equals(bundle.getString("donateID"), "")) {
                     url = bundle.getString("donateURL");
                     orderID = bundle.getString("donateID");
+                    Log.e("errnos", url);
+                    Log.e("errnos", orderID);
                 }
 
             }
@@ -76,6 +78,7 @@ public class PaymentViewActivity extends AppCompatActivity {
                     } else {
                         progressBar.setProgress(newProgress);
                     }
+                    Log.e("errnos", "Loaded Payment Webview " + newProgress + "%");
                     super.onProgressChanged(view, newProgress);
                 }
             });

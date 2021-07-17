@@ -46,6 +46,9 @@ public class DonateActivity extends AppCompatActivity {
                 }
             }
         });
+        findViewById(R.id.llBackMC).setOnClickListener(view -> {
+            onBackPressed();
+        });
         ArrayList<Integer> integerArrayList = new ArrayList<>();
         for (int takagula = 1; takagula <= 200; takagula++) {
             integerArrayList.add(takagula * 5);

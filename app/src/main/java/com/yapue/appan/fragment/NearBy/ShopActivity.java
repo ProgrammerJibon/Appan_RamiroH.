@@ -1,14 +1,15 @@
 package com.yapue.appan.fragment.NearBy;
 
 import android.content.Context;
-import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.SearchView;
-import android.view.View;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -48,7 +49,6 @@ public class ShopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mContext=ShopActivity.this;
         binding= DataBindingUtil.setContentView(this, R.layout.fragment_shop);
-
         sharedPrefrence = SharedPrefrence.getInstance(mContext);
         loginDTO = sharedPrefrence.getParentUser(Consts.LOGINDTO);
 
@@ -107,7 +107,7 @@ public class ShopActivity extends AppCompatActivity {
                     try {
                         Type listType = new TypeToken<List<NearByDTO>>() {
                         }.getType();
-                        shopList = (ArrayList<NearByDTO>) new Gson().fromJson(response.getJSONArray("data").toString(), listType);
+                        shopList = new Gson().fromJson(response.getJSONArray("data").toString(), listType);
 
                         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(mContext);
                         binding.rvShop.setLayoutManager(mLayoutManager);

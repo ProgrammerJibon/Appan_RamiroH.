@@ -3,7 +3,7 @@
     <color name="colorPrimary">#ffaa68</color>
     <color name="colorPrimaryDark">#fe6e91</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="Mod">#D9FFFFFF</color>
     <color name="red">#FF2D00</color>
     <color name="colorGreenDark">#49A140</color>
     <color name="text_color_signup">#b3b3b3</color>
